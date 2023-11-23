@@ -1,0 +1,68 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    gap: 30px;
+
+    .card {
+        width: 240px;
+        height: 238px;
+        border-radius: 20px;
+        background: $middle-grey;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        
+
+        .img {
+            position: relative;
+            
+            .circle {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: $dark-grey;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 10px;
+        
+                p {
+                     @include text-formatter($grey, 400, 140%, 16px, "Space Mono");
+               }
+            }
+            
+            > img {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .name {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            > p {
+                @include text-formatter($white, 600, 140%, 22px);
+                margin-bottom: 5px;
+            }
+        
+            .total {
+                display: flex;
+                gap: 10px;
+        
+                h6 {
+                    @include text-formatter($grey, 400, 140%, 16px);
+                }
+        
+                > p {
+                    @include text-formatter($white, 400, 140%, 16px, "Space Mono");
+                }
+            }
+        }
+    }
+}

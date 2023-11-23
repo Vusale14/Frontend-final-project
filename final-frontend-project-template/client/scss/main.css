@@ -1,0 +1,2604 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter";
+}
+
+.search {
+  width: 425px;
+  position: relative;
+}
+.search input {
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 0 0 20px;
+}
+.search button {
+  width: 211px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.search button span {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.search button span:hover {
+  color: #FFF;
+}
+.search button:hover {
+  background-color: rgba(128, 0, 128, 0.257);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 3fr);
+  gap: 30px;
+}
+.cards .card {
+  width: 240px;
+  height: 238px;
+  border-radius: 20px;
+  background: #3B3B3B;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cards .card .img {
+  position: relative;
+}
+.cards .card .img .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #2B2B2B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+}
+.cards .card .img .circle p {
+  color: #858584;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.cards .card .img .circle p:hover {
+  color: #858584;
+}
+.cards .card .img > img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+.cards .card .name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cards .card .name > p {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 5px;
+}
+.cards .card .name > p:hover {
+  color: #FFF;
+}
+.cards .card .name .total {
+  display: flex;
+  gap: 10px;
+}
+.cards .card .name .total h6 {
+  color: #858584;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.cards .card .name .total h6:hover {
+  color: #858584;
+}
+.cards .card .name .total > p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.cards .card .name .total > p:hover {
+  color: #FFF;
+}
+
+button {
+  display: flex;
+  width: 152px;
+  height: 60px;
+  padding: 0px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: #A259FF;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+button:hover {
+  background-color: rgba(128, 0, 128, 0.257);
+}
+
+.navbar {
+  width: 1050px;
+  margin: auto;
+  width: 100%;
+  height: 80px;
+  background-color: #2B2B2B;
+  display: flex;
+  padding: 20px 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1050px) {
+  .navbar {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .navbar {
+    width: 315px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .navbar {
+    width: 100%;
+    height: 54px;
+    padding: 15px 50px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+}
+.navbar .navbar-left {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.navbar .navbar-left #title {
+  width: 199.414px;
+  height: 19.8px;
+  margin-top: 5px;
+}
+.navbar .navbar-left #icon {
+  width: 32px;
+  height: 32px;
+}
+@media screen and (max-width: 1050px) {
+  .navbar .navbar-left #title {
+    width: 149.56px;
+    height: 14.85px;
+  }
+}
+.navbar .navbar-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.navbar .navbar-right a {
+  text-decoration: none;
+}
+.navbar .navbar-right p {
+  color: #FFF;
+  font-weight: 600px;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+  cursor: pointer;
+}
+.navbar .navbar-right p:hover {
+  color: #FFF;
+}
+.navbar .navbar-right #burger-menu {
+  display: none;
+}
+@media screen and (max-width: 1050px) {
+  .navbar .navbar-right p {
+    display: none;
+  }
+  .navbar .navbar-right button {
+    display: none;
+  }
+  .navbar .navbar-right #burger-menu {
+    display: initial;
+  }
+}
+
+.footer {
+  background-color: #3B3B3B;
+}
+.footer .container {
+  width: 1050px;
+  margin: auto;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1050px) {
+  .footer .container {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .footer .container {
+    width: 315px;
+  }
+}
+.footer .container .left-side .image {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+.footer .container .left-side .image #img1 {
+  width: 32px;
+  height: 32px;
+}
+.footer .container .left-side .image #img2 {
+  width: 200px;
+  height: 20px;
+  margin-top: 8px;
+}
+.footer .container .left-side p {
+  color: #CCC;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 20px;
+}
+.footer .container .left-side p:hover {
+  color: #CCC;
+}
+.footer .container .left-side span {
+  color: #CCC;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.footer .container .left-side span:hover {
+  color: #CCC;
+}
+.footer .container .left-side > img {
+  margin-top: 15px;
+}
+.footer .container .middle-side {
+  display: flex;
+  flex-direction: column;
+}
+.footer .container .middle-side h2 {
+  color: #FFF;
+  font-weight: 700;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Space Mono";
+  font-style: normal;
+  margin-bottom: -33px;
+}
+.footer .container .middle-side h2:hover {
+  color: #FFF;
+}
+.footer .container .middle-side span {
+  color: #CCC;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.footer .container .middle-side span:hover {
+  color: #CCC;
+}
+.footer .container .middle-side #span1 {
+  margin-bottom: -40px;
+}
+.footer .container .middle-side #span2 {
+  margin-bottom: -40px;
+}
+.footer .container .right-side > h2 {
+  color: #FFF;
+  font-weight: 700;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Space Mono";
+  font-style: normal;
+  margin-bottom: 25px;
+}
+.footer .container .right-side > h2:hover {
+  color: #FFF;
+}
+.footer .container .right-side > p {
+  color: #CCC;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 20px;
+}
+.footer .container .right-side > p:hover {
+  color: #CCC;
+}
+.footer .container-end {
+  width: 1050px;
+  margin: auto;
+}
+@media screen and (max-width: 1050px) {
+  .footer .container-end {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .footer .container-end {
+    width: 315px;
+  }
+}
+.footer .container-end .solid {
+  border: 1px solid #858584;
+}
+.footer .container-end > p {
+  color: #CCC;
+  font-weight: 400;
+  line-height: 110%;
+  font-size: 12px;
+  font-family: "Work Sans";
+  font-style: normal;
+  padding: 20px 0;
+}
+.footer .container-end > p:hover {
+  color: #CCC;
+}
+
+body {
+  background-color: #2B2B2B;
+}
+body .wrapper {
+  width: 1050px;
+  margin: auto;
+  padding: 80px 0;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper {
+    width: 315px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper {
+    padding: 40px 0;
+  }
+}
+body .wrapper .hero-section {
+  display: flex;
+  gap: 30px;
+  margin: auto;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper .hero-section {
+    display: none;
+  }
+}
+body .wrapper .hero-section .hero-section-left h1 {
+  color: #FFF;
+  font-weight: 600px;
+  line-height: 110%;
+  font-size: 67px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 20px;
+}
+body .wrapper .hero-section .hero-section-left h1:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper .hero-section .hero-section-left h1 {
+    color: #FFF;
+    font-weight: 600px;
+    line-height: 120%;
+    font-size: 38px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper .hero-section .hero-section-left h1:hover {
+    color: #FFF;
+  }
+}
+body .wrapper .hero-section .hero-section-left > p {
+  color: #FFF;
+  font-weight: 400px;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 30px;
+}
+body .wrapper .hero-section .hero-section-left > p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper .hero-section .hero-section-left > p {
+    color: #FFF;
+    font-weight: 400px;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper .hero-section .hero-section-left > p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper .hero-section .hero-section-left button {
+  width: 224px;
+  margin-bottom: 30px;
+}
+body .wrapper .hero-section .hero-section-left button > p {
+  color: #FFF;
+  font-weight: 600px;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper .hero-section .hero-section-left button > p:hover {
+  color: #FFF;
+}
+body .wrapper .hero-section .hero-section-left .statistics {
+  display: flex;
+  gap: 60px;
+}
+body .wrapper .hero-section .hero-section-left .statistics span {
+  color: #FFF;
+  font-weight: 700px;
+  line-height: 140%;
+  font-size: 28px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+body .wrapper .hero-section .hero-section-left .statistics span:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper .hero-section .hero-section-left .statistics span {
+    color: #FFF;
+    font-weight: 700px;
+    line-height: 160%;
+    font-size: 22px;
+    font-family: "Space Mono";
+    font-style: normal;
+  }
+  body .wrapper .hero-section .hero-section-left .statistics span:hover {
+    color: #FFF;
+  }
+}
+body .wrapper .hero-section .hero-section-left .statistics span p {
+  color: #FFF;
+  font-weight: 400px;
+  line-height: 160%;
+  font-size: 24px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper .hero-section .hero-section-left .statistics span p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper .hero-section .hero-section-left .statistics span p {
+    color: #FFF;
+    font-weight: 400px;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper .hero-section .hero-section-left .statistics span p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper .hero-section .hero-section-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .wrapper .hero-section .hero-section-right #gif {
+  width: 510px;
+  height: 510px;
+  margin-left: 40px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper .hero-section .hero-section-right #gif {
+    width: 330px;
+    height: 351px;
+  }
+}
+body .wrapper .hero-section2 {
+  display: none;
+  gap: 30px;
+  margin: auto;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper .hero-section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body .wrapper .hero-section2 .hero-section-first h1 {
+  color: #FFF;
+  font-weight: 600px;
+  line-height: 110%;
+  font-size: 67px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper .hero-section2 .hero-section-first h1:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper .hero-section2 .hero-section-first h1 {
+    color: #FFF;
+    font-weight: 600px;
+    line-height: 140%;
+    font-size: 28px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper .hero-section2 .hero-section-first h1:hover {
+    color: #FFF;
+  }
+}
+body .wrapper .hero-section2 .hero-section-first > p {
+  color: #FFF;
+  font-weight: 400px;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper .hero-section2 .hero-section-first > p:hover {
+  color: #FFF;
+}
+body .wrapper .hero-section2 .hero-section-second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .wrapper .hero-section2 .hero-section-second #gif {
+  width: 510px;
+  height: 510px;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper .hero-section2 .hero-section-second #gif {
+    width: 330px;
+    height: 351px;
+  }
+}
+body .wrapper .hero-section2 .hero-section-third button {
+  width: 224px;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper .hero-section2 .hero-section-third button {
+    width: 375px;
+  }
+}
+body .wrapper .hero-section2 .hero-section-third button > p {
+  color: #FFF;
+  font-weight: 600px;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper .hero-section2 .hero-section-third button > p:hover {
+  color: #FFF;
+}
+body .wrapper .hero-section2 .hero-section-third .statistics {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper .hero-section2 .hero-section-third .statistics {
+    justify-content: space-between;
+  }
+}
+body .wrapper .hero-section2 .hero-section-third .statistics span {
+  color: #FFF;
+  font-weight: 700px;
+  line-height: 140%;
+  font-size: 28px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+body .wrapper .hero-section2 .hero-section-third .statistics span:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper .hero-section2 .hero-section-third .statistics span {
+    color: #FFF;
+    font-weight: 700;
+    line-height: 160%;
+    font-size: 22px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper .hero-section2 .hero-section-third .statistics span:hover {
+    color: #FFF;
+  }
+}
+body .wrapper .hero-section2 .hero-section-third .statistics span p {
+  color: #FFF;
+  font-weight: 400px;
+  line-height: 160%;
+  font-size: 24px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper .hero-section2 .hero-section-third .statistics span p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper .hero-section2 .hero-section-third .statistics span p {
+    color: #FFF;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper .hero-section2 .hero-section-third .statistics span p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper2 {
+  width: 1050px;
+  margin: auto;
+  padding: 80px 0;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper2 {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper2 {
+    width: 315px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper2 {
+    padding: 40px 0;
+  }
+}
+body .wrapper2 h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 120%;
+  font-size: 38px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 10px;
+}
+body .wrapper2 h2:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper2 h2 {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 28px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper2 h2:hover {
+    color: #FFF;
+  }
+}
+body .wrapper2 > p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 60px;
+}
+body .wrapper2 > p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper2 > p {
+    color: #FFF;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+    margin-bottom: 40px;
+  }
+  body .wrapper2 > p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper2 .trending-collection {
+  display: flex;
+  gap: 30px;
+}
+body .wrapper2 .trending-collection .first > img, body .wrapper2 .trending-collection .second > img, body .wrapper2 .trending-collection .third > img {
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper2 .trending-collection .first > img, body .wrapper2 .trending-collection .second > img, body .wrapper2 .trending-collection .third > img {
+    width: 315px;
+    height: 315px;
+  }
+}
+body .wrapper2 .trending-collection .first .middle-side, body .wrapper2 .trending-collection .second .middle-side, body .wrapper2 .trending-collection .third .middle-side {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+body .wrapper2 .trending-collection .first .middle-side > img, body .wrapper2 .trending-collection .second .middle-side > img, body .wrapper2 .trending-collection .third .middle-side > img {
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper2 .trending-collection .first .middle-side > img, body .wrapper2 .trending-collection .second .middle-side > img, body .wrapper2 .trending-collection .third .middle-side > img {
+    width: 95px;
+    height: 95px;
+  }
+}
+body .wrapper2 .trending-collection .first .middle-side .mini-box, body .wrapper2 .trending-collection .second .middle-side .mini-box, body .wrapper2 .trending-collection .third .middle-side .mini-box {
+  width: 100px;
+  height: 100px;
+  background-color: #A259FF;
+  padding: 32px 15px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper2 .trending-collection .first .middle-side .mini-box, body .wrapper2 .trending-collection .second .middle-side .mini-box, body .wrapper2 .trending-collection .third .middle-side .mini-box {
+    width: 95px;
+    height: 95px;
+  }
+}
+body .wrapper2 .trending-collection .first .middle-side .mini-box p, body .wrapper2 .trending-collection .second .middle-side .mini-box p, body .wrapper2 .trending-collection .third .middle-side .mini-box p {
+  color: #FFF;
+  font-weight: 700;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+body .wrapper2 .trending-collection .first .middle-side .mini-box p:hover, body .wrapper2 .trending-collection .second .middle-side .mini-box p:hover, body .wrapper2 .trending-collection .third .middle-side .mini-box p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper2 .trending-collection .first .middle-side .mini-box p, body .wrapper2 .trending-collection .second .middle-side .mini-box p, body .wrapper2 .trending-collection .third .middle-side .mini-box p {
+    color: #FFF;
+    font-weight: 700;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Space Mono";
+    font-style: normal;
+  }
+  body .wrapper2 .trending-collection .first .middle-side .mini-box p:hover, body .wrapper2 .trending-collection .second .middle-side .mini-box p:hover, body .wrapper2 .trending-collection .third .middle-side .mini-box p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper2 .trending-collection .first p, body .wrapper2 .trending-collection .second p, body .wrapper2 .trending-collection .third p {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 10px;
+}
+body .wrapper2 .trending-collection .first p:hover, body .wrapper2 .trending-collection .second p:hover, body .wrapper2 .trending-collection .third p:hover {
+  color: #FFF;
+}
+body .wrapper2 .trending-collection .first .bottom-side, body .wrapper2 .trending-collection .second .bottom-side, body .wrapper2 .trending-collection .third .bottom-side {
+  display: flex;
+  gap: 12px;
+}
+body .wrapper2 .trending-collection .first .bottom-side > img, body .wrapper2 .trending-collection .second .bottom-side > img, body .wrapper2 .trending-collection .third .bottom-side > img {
+  width: 24px;
+  height: 24px;
+}
+body .wrapper2 .trending-collection .first .bottom-side > p, body .wrapper2 .trending-collection .second .bottom-side > p, body .wrapper2 .trending-collection .third .bottom-side > p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper2 .trending-collection .first .bottom-side > p:hover, body .wrapper2 .trending-collection .second .bottom-side > p:hover, body .wrapper2 .trending-collection .third .bottom-side > p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper2 .trending-collection .third {
+    display: none;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper2 .trending-collection .second, body .wrapper2 .trending-collection .third {
+    display: none;
+  }
+}
+body .wrapper3 {
+  width: 1050px;
+  margin: auto;
+  padding: 80px 0;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper3 {
+    width: 315px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 {
+    padding: 40px 0;
+  }
+}
+body .wrapper3 .card-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 .card-top {
+    padding-bottom: 40px;
+  }
+}
+body .wrapper3 .card-top .card-left h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 120%;
+  font-size: 38px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 10px;
+}
+body .wrapper3 .card-top .card-left h2:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 .card-top .card-left h2 {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 28px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper3 .card-top .card-left h2:hover {
+    color: #FFF;
+  }
+}
+body .wrapper3 .card-top .card-left p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper3 .card-top .card-left p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 .card-top .card-left p {
+    color: #FFF;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper3 .card-top .card-left p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper3 .card-top button {
+  width: 247px;
+  height: 60px;
+  background-color: transparent;
+  border: 2px solid #A259FF;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper3 .card-top button {
+    display: none;
+    width: 315px;
+  }
+}
+body .wrapper3 .card-top button > p {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper3 .card-top button > p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 .cards {
+    grid-template-columns: repeat(2, 3fr);
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper3 .cards {
+    grid-template-columns: repeat(1, 5fr);
+  }
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 .cards .card {
+    width: 330px;
+    height: 100px;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 1050px) and (max-width: 690px) {
+  body .wrapper3 .cards .card {
+    width: 315px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 .cards .card .img > img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 .cards .card .img .circle {
+    top: -5px;
+    left: -10px;
+  }
+}
+body .wrapper3 .cards .card .name > p {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper3 .cards .card .name > p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 .cards .card .name > p {
+    margin-left: -55px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 .cards .card .name .total {
+    margin-left: 20px;
+    gap: 10px;
+  }
+}
+body .wrapper3 .cards .card .name .total h6 {
+  color: #858584;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper3 .cards .card .name .total h6:hover {
+  color: #858584;
+}
+body .wrapper3 .cards .card .name .total > p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+body .wrapper3 .cards .card .name .total > p:hover {
+  color: #FFF;
+}
+body .wrapper3 .cards #button {
+  display: none;
+  width: 247px;
+  height: 60px;
+  background-color: transparent;
+  border: 2px solid #A259FF;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper3 .cards #button {
+    display: flex;
+    width: 315px;
+  }
+}
+body .wrapper3 .cards #button > p {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper3 .cards #button > p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper3 .first {
+    display: none;
+  }
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper3 .secondary {
+    display: none;
+  }
+}
+body .wrapper4 {
+  width: 1050px;
+  margin: auto;
+  padding: 80px 0;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper4 {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper4 {
+    width: 315px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper4 {
+    padding: 40px 0;
+  }
+}
+body .wrapper4 h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 120%;
+  font-size: 38px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 60px;
+}
+body .wrapper4 h2:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper4 h2 {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 28px;
+    font-family: "Work Sans";
+    font-style: normal;
+    margin-bottom: 40px;
+  }
+  body .wrapper4 h2:hover {
+    color: #FFF;
+  }
+}
+body .wrapper4 .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+}
+@media screen and (max-width: 690px) {
+  body .wrapper4 .cards {
+    grid-template-columns: repeat(2, 4fr);
+  }
+}
+body .wrapper4 .cards .card {
+  width: 240px;
+  height: 316px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper4 .cards .card {
+    width: 150px;
+    height: 231px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper4 .cards .card {
+    width: 148px;
+    height: 209px;
+  }
+}
+body .wrapper4 .cards .card .prm1 {
+  position: relative;
+}
+body .wrapper4 .cards .card .prm1 .abs-picture {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 75px;
+  top: 75px;
+  filter: blur(0);
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper4 .cards .card .prm1 .abs-picture {
+    width: 80px;
+    height: 80px;
+    left: 35px;
+    top: 35px;
+  }
+}
+body .wrapper4 .cards .card .prm1 > img {
+  width: 240px;
+  height: 240px;
+  margin-top: -20px;
+  filter: blur(2px);
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper4 .cards .card .prm1 > img {
+    width: 150px;
+    height: 142px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper4 .cards .card .prm1 > img {
+    width: 148px;
+    height: 142px;
+  }
+}
+body .wrapper4 .cards .card .card-bottom {
+  width: 240px;
+  height: 76px;
+  padding: 20px 30px 25px 30px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper4 .cards .card .card-bottom {
+    width: 150px;
+    height: 67px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper4 .cards .card .card-bottom {
+    width: 147.5px;
+  }
+}
+body .wrapper4 .cards .card .card-bottom p {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper4 .cards .card .card-bottom p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper4 .cards .card .card-bottom p {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper4 .cards .card .card-bottom p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper5 {
+  width: 1050px;
+  margin: auto;
+  padding: 80px 0;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper5 {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper5 {
+    width: 315px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper5 {
+    padding: 40px 0 80px 0;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper5 {
+    padding: 40px 0 60px 0;
+  }
+}
+body .wrapper5 .card-top {
+  display: flex;
+  justify-content: space-between;
+}
+body .wrapper5 .card-top .card-left h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 120%;
+  font-size: 38px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 10px;
+}
+body .wrapper5 .card-top .card-left h2:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper5 .card-top .card-left h2 {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 28px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper5 .card-top .card-left h2:hover {
+    color: #FFF;
+  }
+}
+body .wrapper5 .card-top .card-left p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 60px;
+}
+body .wrapper5 .card-top .card-left p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper5 .card-top .card-left p {
+    color: #FFF;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+    margin-bottom: 40px;
+  }
+  body .wrapper5 .card-top .card-left p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper5 .card-top button {
+  width: 187px;
+  height: 60px;
+  background-color: transparent;
+  border: 2px solid #A259FF;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper5 .card-top button {
+    display: none;
+  }
+}
+body .wrapper5 .card-top button > p {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper5 .card-top button > p:hover {
+  color: #FFF;
+}
+body .wrapper5 .cards {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper5 .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper5 .cards {
+    grid-template-columns: repeat(1, 3fr);
+  }
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper5 .cards #card3 {
+    display: none;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper5 .cards #card3 {
+    display: initial;
+  }
+  body .wrapper5 .cards #card3 #view3 {
+    margin-left: -20px;
+  }
+}
+body .wrapper5 .cards #button {
+  display: none;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper5 .cards #button {
+    width: 315px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid #A259FF;
+    display: flex;
+    gap: 12px;
+  }
+  body .wrapper5 .cards #button p {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper5 .cards #button p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper5 .cards .card {
+  width: 330px;
+  height: 469px;
+}
+body .wrapper5 .cards .card .card-top {
+  width: 330px;
+  height: 296px;
+  margin-top: -20px;
+}
+body .wrapper5 .cards .card .card-middle {
+  width: 330px;
+  height: 173px;
+  padding: 20px 30px 25px 30px;
+}
+body .wrapper5 .cards .card .card-middle h6 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 5px;
+}
+body .wrapper5 .cards .card .card-middle h6:hover {
+  color: #FFF;
+}
+body .wrapper5 .cards .card .card-middle .moon {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+body .wrapper5 .cards .card .card-middle .moon p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+body .wrapper5 .cards .card .card-middle .moon p:hover {
+  color: #FFF;
+}
+body .wrapper5 .cards .card .card-middle .card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+body .wrapper5 .cards .card .card-middle .card-bottom .card-bottom-left h6 {
+  color: #858584;
+  font-weight: 400;
+  line-height: 110%;
+  font-size: 12px;
+  font-family: "Space Mono";
+  font-style: normal;
+  margin-bottom: 8px;
+}
+body .wrapper5 .cards .card .card-middle .card-bottom .card-bottom-left h6:hover {
+  color: #858584;
+}
+body .wrapper5 .cards .card .card-middle .card-bottom .card-bottom-left p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+body .wrapper5 .cards .card .card-middle .card-bottom .card-bottom-left p:hover {
+  color: #FFF;
+}
+body .wrapper5 .cards .card .card-middle .card-bottom .card-bottom-right h6 {
+  color: #858584;
+  font-weight: 400;
+  line-height: 110%;
+  font-size: 12px;
+  font-family: "Space Mono";
+  font-style: normal;
+  margin-bottom: 8px;
+}
+body .wrapper5 .cards .card .card-middle .card-bottom .card-bottom-right h6:hover {
+  color: #858584;
+}
+body .wrapper5 .cards .card .card-middle .card-bottom .card-bottom-right p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+body .wrapper5 .cards .card .card-middle .card-bottom .card-bottom-right p:hover {
+  color: #FFF;
+}
+body .wrapper6 {
+  width: 100%;
+}
+body .wrapper6 .mushroom {
+  position: relative;
+}
+body .wrapper6 .mushroom #mushroom-image1 {
+  width: 100%;
+  height: 640px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper6 .mushroom #mushroom-image1 {
+    display: none;
+    height: 630px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper6 .mushroom #mushroom-image1 {
+    height: 593px;
+  }
+}
+body .wrapper6 .mushroom #mushroom-image2 {
+  display: none;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper6 .mushroom #mushroom-image2 {
+    width: 100%;
+    height: 630px;
+    display: initial;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper6 .mushroom #mushroom-image2 {
+    width: 100%;
+    height: 593px;
+    display: initial;
+  }
+}
+body .wrapper6 .mushroom .image {
+  width: 100%;
+  height: 640px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%);
+  top: 10px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper6 .mushroom .image {
+    height: 630px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper6 .mushroom .image {
+    height: 593px;
+  }
+}
+body .wrapper6 .mushroom .shroomie {
+  position: absolute;
+  width: 151px;
+  height: 44px;
+  background-color: #3B3B3B;
+  border-radius: 20px;
+  gap: 12px;
+  display: flex;
+  padding: 10px 20px;
+  top: 370px;
+  left: 150px;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper6 .mushroom .shroomie {
+    top: 100px;
+  }
+}
+body .wrapper6 .mushroom .shroomie > img {
+  width: 24px;
+  height: 24px;
+}
+body .wrapper6 .mushroom .shroomie p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper6 .mushroom .shroomie p:hover {
+  color: #FFF;
+}
+body .wrapper6 .mushroom h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 110%;
+  font-size: 51px;
+  font-family: "Work Sans";
+  font-style: normal;
+  position: absolute;
+  top: 430px;
+  left: 150px;
+}
+body .wrapper6 .mushroom h2:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper6 .mushroom h2 {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 120%;
+    font-size: 38px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper6 .mushroom h2:hover {
+    color: #FFF;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper6 .mushroom h2 {
+    top: 180px;
+  }
+}
+body .wrapper6 .mushroom button {
+  position: absolute;
+  width: 198px;
+  height: 60px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 22px 50px;
+  gap: 12px;
+  display: flex;
+  top: 520px;
+  left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper6 .mushroom button {
+    width: 315px;
+    height: 60px;
+    top: 450px;
+  }
+}
+body .wrapper6 .mushroom button img {
+  width: 20px;
+  height: 20px;
+}
+body .wrapper6 .mushroom button p {
+  color: #2B2B2B;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper6 .mushroom button p:hover {
+  color: #2B2B2B;
+}
+body .wrapper6 .mushroom .mushroom-right {
+  width: 295px;
+  height: 147px;
+  padding: 30px;
+  position: absolute;
+  background-color: rgba(59, 59, 59, 0.5);
+  border-radius: 20px;
+  right: 140px;
+  top: 425px;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper6 .mushroom .mushroom-right {
+    width: 315px;
+    height: 147px;
+    right: 210px;
+    top: 260px;
+  }
+}
+body .wrapper6 .mushroom .mushroom-right p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 110%;
+  font-size: 12px;
+  font-family: "Space Mono";
+  font-style: normal;
+  margin-bottom: 10px;
+}
+body .wrapper6 .mushroom .mushroom-right p:hover {
+  color: #FFF;
+}
+body .wrapper6 .mushroom .mushroom-right .clock {
+  display: flex;
+  gap: 10px;
+}
+body .wrapper6 .mushroom .mushroom-right .clock p {
+  color: #FFF;
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 38px;
+  font-family: "Space Mono";
+  font-style: normal;
+  margin-bottom: 5px;
+}
+body .wrapper6 .mushroom .mushroom-right .clock p:hover {
+  color: #FFF;
+}
+body .wrapper6 .mushroom .mushroom-right .hours {
+  display: flex;
+  justify-content: space-between;
+}
+body .wrapper6 .mushroom .mushroom-right .hours p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 110%;
+  font-size: 12px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+body .wrapper6 .mushroom .mushroom-right .hours p:hover {
+  color: #FFF;
+}
+body .wrapper7 {
+  width: 1050px;
+  margin: auto;
+  padding: 80px 0;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper7 {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper7 {
+    width: 315px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper7 {
+    padding: 40px 0;
+  }
+}
+body .wrapper7 h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 120%;
+  font-size: 38px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 10px;
+}
+body .wrapper7 h2:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper7 h2 {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 28px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper7 h2:hover {
+    color: #FFF;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper7 h2 {
+    margin-top: 40px;
+  }
+}
+body .wrapper7 p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 48px;
+}
+body .wrapper7 p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper7 p {
+    color: #FFF;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+    margin-bottom: 40px;
+  }
+  body .wrapper7 p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper7 .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 690px) {
+  body .wrapper7 .cards {
+    grid-template-columns: repeat(1, 3fr);
+  }
+}
+body .wrapper7 .cards .card {
+  width: 330px;
+  height: 439px;
+  padding: 10px 20px 30px 20px;
+  gap: 30px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper7 .cards .card {
+    width: 210px;
+    height: 320px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper7 .cards .card {
+    display: flex;
+    flex-direction: row;
+    width: 315px;
+    height: 157px;
+    padding: 20px;
+  }
+}
+body .wrapper7 .cards .card .card-top {
+  margin-bottom: 20px;
+}
+body .wrapper7 .cards .card .card-top img {
+  width: 250px;
+  height: 250px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper7 .cards .card .card-top img {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper7 .cards .card .card-top img {
+    width: 100px;
+    height: 100px;
+  }
+}
+body .wrapper7 .cards .card .card-bottom {
+  width: 250px;
+  height: 107px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper7 .cards .card .card-bottom {
+    width: 170px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper7 .cards .card .card-bottom {
+    width: 155px;
+    height: 117px;
+  }
+}
+body .wrapper7 .cards .card .card-bottom h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 10px;
+}
+body .wrapper7 .cards .card .card-bottom h2:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper7 .cards .card .card-bottom h2 {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper7 .cards .card .card-bottom h2:hover {
+    color: #FFF;
+  }
+}
+body .wrapper7 .cards .card .card-bottom p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+  text-align: center;
+}
+body .wrapper7 .cards .card .card-bottom p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper7 .cards .card .card-bottom p {
+    color: #FFF;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 12px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper7 .cards .card .card-bottom p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper8 {
+  width: 1050px;
+  margin: auto;
+  padding: 40px 0 80px 0;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper8 {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 {
+    width: 315px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 {
+    padding: 40px;
+  }
+}
+body .wrapper8 .box {
+  width: 1050px;
+  height: 430px;
+  background-color: #3B3B3B;
+  border-radius: 20px;
+  padding: 60px;
+  display: flex;
+  gap: 80px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper8 .box {
+    width: 690px;
+    height: 360px;
+    padding: 40px 30px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 .box {
+    display: none;
+  }
+}
+body .wrapper8 .box .box-left img {
+  width: 425px;
+  height: 310px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper8 .box .box-left img {
+    width: 300px;
+    height: 280px;
+  }
+}
+body .wrapper8 .box .box-right h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 120%;
+  font-size: 38px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 10px;
+}
+body .wrapper8 .box .box-right h2:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper8 .box .box-right h2 {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 28px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper8 .box .box-right h2:hover {
+    color: #FFF;
+  }
+}
+body .wrapper8 .box .box-right p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 40px;
+}
+body .wrapper8 .box .box-right p:hover {
+  color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper8 .box .box-right p {
+    color: #FFF;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  body .wrapper8 .box .box-right p:hover {
+    color: #FFF;
+  }
+}
+body .wrapper8 .box-left.second {
+  display: none;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 .box-left.second {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 .box-left.second img {
+    width: 315px;
+    height: 255px;
+    margin-bottom: 30px;
+  }
+}
+body .wrapper8 .box-right.second {
+  display: none;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 .box-right.second {
+    display: initial;
+  }
+}
+body .wrapper8 .box-right.second h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 28px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 10px;
+}
+body .wrapper8 .box-right.second h2:hover {
+  color: #FFF;
+}
+body .wrapper8 .box-right.second p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper8 .box-right.second p:hover {
+  color: #FFF;
+}
+
+.middle-side {
+  display: flex;
+  gap: 60px;
+}
+@media screen and (max-width: 1050px) {
+  .middle-side {
+    gap: 40px;
+  }
+}
+.middle-side .left-side img {
+  width: 610px;
+  height: 691px;
+}
+@media screen and (max-width: 1050px) {
+  .middle-side .left-side img {
+    width: 397px;
+    height: 615px;
+  }
+}
+.middle-side .right-side {
+  padding: 100px 0;
+}
+@media screen and (max-width: 1050px) {
+  .middle-side .right-side {
+    padding: 80px 0;
+  }
+}
+.middle-side .right-side h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 110%;
+  font-size: 51px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 20px;
+}
+.middle-side .right-side h2:hover {
+  color: #FFF;
+}
+.middle-side .right-side p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 40px;
+}
+.middle-side .right-side p:hover {
+  color: #FFF;
+}
+.middle-side .right-side .input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.middle-side .right-side .input img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+.middle-side .right-side .input #user-icon {
+  top: 12px;
+  left: 20px;
+}
+.middle-side .right-side .input #email-icon {
+  top: 74px;
+  left: 20px;
+}
+.middle-side .right-side .input #lock-icon {
+  top: 135px;
+  left: 20px;
+}
+.middle-side .right-side .input #lock-icon2 {
+  top: 195px;
+  left: 20px;
+}
+.middle-side .right-side .input #lock-key-icon {
+  top: 74px;
+  left: 20px;
+}
+.middle-side .right-side .input input {
+  width: 330px;
+  height: 46px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  padding: 16px 20px 16px 45px;
+  border: none;
+}
+.middle-side .right-side button {
+  width: 330px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.middle-side .right-side button:hover {
+  color: #FFF;
+}
+
+.background-picture {
+  position: relative;
+}
+.background-picture .top img {
+  width: 100%;
+  height: 320px;
+  padding: 20px 0 0 0;
+}
+.background-picture .bottom img {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 255px;
+  left: 170px;
+  border: 2px solid #2B2B2B;
+  border-radius: 20px;
+}
+
+.first-section {
+  width: 1050px;
+  margin: auto;
+  padding: 80px 0 40px 0;
+  display: flex;
+  gap: 100px;
+}
+@media screen and (max-width: 1050px) {
+  .first-section {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .first-section {
+    width: 315px;
+  }
+}
+.first-section .left-side {
+  width: 599px;
+  height: 377px;
+}
+.first-section .left-side h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 110%;
+  font-size: 51px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.first-section .left-side h2:hover {
+  color: #FFF;
+}
+.first-section .left-side .numbers {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 0 0;
+}
+.first-section .left-side .numbers > span {
+  color: #FFF;
+  font-weight: 700;
+  line-height: 140%;
+  font-size: 28px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.first-section .left-side .numbers > span:hover {
+  color: #FFF;
+}
+.first-section .left-side .numbers #three-hundred {
+  padding: 0 150px 0 0;
+}
+.first-section .left-side .volume {
+  display: flex;
+  gap: 117px;
+  margin-bottom: 30px;
+}
+.first-section .left-side .volume > p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.first-section .left-side .volume > p:hover {
+  color: #FFF;
+}
+.first-section .left-side .volume #followers {
+  margin-left: -60px;
+}
+.first-section .left-side > span {
+  color: #858584;
+  font-weight: 700;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.first-section .left-side > span:hover {
+  color: #858584;
+}
+.first-section .left-side > p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.first-section .left-side > p:hover {
+  color: #FFF;
+}
+.first-section .left-side .icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.first-section .right-side {
+  display: flex;
+  gap: 20px;
+}
+.first-section .right-side #btn1 {
+  width: 186px;
+  height: 66px;
+}
+.first-section .right-side #btn2 {
+  width: 145px;
+  height: 60px;
+  margin-top: 3px;
+  background-color: transparent;
+  border: 2px solid #A259FF;
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.first-section .right-side #btn2 p {
+  color: #A259FF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.first-section .right-side #btn2 p:hover {
+  color: #A259FF;
+}
+.first-section .right-side #btn2:hover {
+  color: #FFF;
+}
+
+.solid {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.295);
+}
+
+.second-section {
+  width: 1050px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1050px) {
+  .second-section {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .second-section {
+    width: 315px;
+  }
+}
+.second-section .created {
+  display: flex;
+  gap: 16px;
+}
+.second-section .created p {
+  color: #858584;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  cursor: pointer;
+}
+.second-section .created p:hover {
+  color: #858584;
+}
+.second-section .created p:hover {
+  color: #FFF;
+}
+.second-section .created .circle1 {
+  width: 50px;
+  height: 32px;
+  border: 1px solid #858584;
+  border-radius: 20px;
+  background: #858584;
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+}
+.second-section .created .circle1 p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.second-section .created .circle1 p:hover {
+  color: #FFF;
+}
+.second-section .owned {
+  display: flex;
+  gap: 16px;
+}
+.second-section .owned p {
+  color: #858584;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  cursor: pointer;
+}
+.second-section .owned p:hover {
+  color: #858584;
+}
+.second-section .owned p:hover {
+  color: #FFF;
+}
+.second-section .owned .circle2 {
+  width: 40px;
+  height: 32px;
+  border: 1px solid #858584;
+  border-radius: 20px;
+  background: #858584;
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+}
+.second-section .owned .circle2 p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.second-section .owned .circle2 p:hover {
+  color: #FFF;
+}
+.second-section .collection {
+  display: flex;
+  gap: 16px;
+}
+.second-section .collection p {
+  color: #858584;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  cursor: pointer;
+}
+.second-section .collection p:hover {
+  color: #858584;
+}
+.second-section .collection p:hover {
+  color: #FFF;
+}
+.second-section .collection .circle3 {
+  width: 30px;
+  height: 32px;
+  border: 1px solid #858584;
+  border-radius: 20px;
+  background: #858584;
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+}
+.second-section .collection .circle3 p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.second-section .collection .circle3 p:hover {
+  color: #FFF;
+}
+
+.third-section {
+  background-color: #3B3B3B;
+}
+.third-section .cards {
+  width: 1050px;
+  margin: auto;
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+}
+@media screen and (max-width: 1050px) {
+  .third-section .cards {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .third-section .cards {
+    width: 315px;
+  }
+}
+.third-section .cards .card {
+  width: 330px;
+  height: 469px;
+  background-color: #2B2B2B;
+}
+.third-section .cards .card .card-top {
+  width: 330px;
+  height: 296px;
+  margin-top: -20px;
+}
+.third-section .cards .card .card-middle {
+  width: 330px;
+  height: 173px;
+  padding: 20px 30px 25px 30px;
+}
+.third-section .cards .card .card-middle h6 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 5px;
+}
+.third-section .cards .card .card-middle h6:hover {
+  color: #FFF;
+}
+.third-section .cards .card .card-middle .moon {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+.third-section .cards .card .card-middle .moon p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.third-section .cards .card .card-middle .moon p:hover {
+  color: #FFF;
+}
+.third-section .cards .card .card-middle .card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.third-section .cards .card .card-middle .card-bottom .card-bottom-left h6 {
+  color: #858584;
+  font-weight: 400;
+  line-height: 110%;
+  font-size: 12px;
+  font-family: "Space Mono";
+  font-style: normal;
+  margin-bottom: 8px;
+}
+.third-section .cards .card .card-middle .card-bottom .card-bottom-left h6:hover {
+  color: #858584;
+}
+.third-section .cards .card .card-middle .card-bottom .card-bottom-left p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.third-section .cards .card .card-middle .card-bottom .card-bottom-left p:hover {
+  color: #FFF;
+}
+.third-section .cards .card .card-middle .card-bottom .card-bottom-right h6 {
+  color: #858584;
+  font-weight: 400;
+  line-height: 110%;
+  font-size: 12px;
+  font-family: "Space Mono";
+  font-style: normal;
+  margin-bottom: 8px;
+}
+.third-section .cards .card .card-middle .card-bottom .card-bottom-right h6:hover {
+  color: #858584;
+}
+.third-section .cards .card .card-middle .card-bottom .card-bottom-right p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.third-section .cards .card .card-middle .card-bottom .card-bottom-right p:hover {
+  color: #FFF;
+}

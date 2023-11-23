@@ -1,0 +1,27 @@
+.search {
+    width: 425px;
+    position: relative;
+
+    input {
+        width: 100%;
+        height: 60px;
+        border-radius: 20px;
+        border: none;
+        padding: 0 0 0 20px;
+    }
+
+    button {
+        width: 211px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        span {
+            @include text-formatter($white, 600, 140%, 16px);
+        }
+
+        &:hover {
+            background-color: rgba(128, 0, 128, 0.257);
+        }
+    }
+}

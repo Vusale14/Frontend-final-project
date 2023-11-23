@@ -1,0 +1,91 @@
+.footer {
+    background-color: $middle-grey;
+
+    .container {
+        @include container;
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .left-side {
+
+            .image {
+                display: flex;
+                gap: 12px;
+                margin-bottom: 30px;
+
+                #img1 {
+                    width: 32px;
+                    height: 32px;
+                }
+
+                #img2 {
+                    width: 200px;
+                    height: 20px;
+                    margin-top: 8px;
+                }
+            }
+
+            p {
+                @include text-formatter($light-grey, 400, 140%, 16px);
+                margin-bottom: 20px;
+            }
+
+            span {
+                @include text-formatter($light-grey, 400, 140%, 16px);
+            }
+
+            > img {
+                margin-top: 15px;
+            }
+        }
+
+        .middle-side {
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                @include text-formatter($white, 700, 160%, 22px, "Space Mono");
+                margin-bottom: -33px;
+            }
+
+            span {
+                @include text-formatter($light-grey, 400, 140%, 16px);
+            }
+
+            #span1 {
+                margin-bottom: -40px;
+            }
+
+            #span2 {
+                margin-bottom: -40px;
+            }
+        }
+
+        .right-side {
+
+            > h2 {
+                @include text-formatter($white, 700, 160%, 22px, "Space Mono");
+                margin-bottom: 25px;
+            }
+
+            > p {
+                @include text-formatter($light-grey, 400, 140%, 16px);
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .container-end {
+        @include container;
+
+        .solid {
+            border: 1px solid $grey;
+        }
+
+        > p {
+            @include text-formatter($light-grey, 400, 110%, 12px);
+            padding: 20px 0;
+        }
+    }
+}

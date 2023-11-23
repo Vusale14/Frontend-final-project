@@ -1,0 +1,80 @@
+.navbar {
+    @include container;
+    width: 100%;
+    height: 80px;
+    background-color: $dark-grey;
+    display: flex;
+    padding: 20px 50px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-size(tablet) {
+        width: 100%;
+        height: 54px;
+        padding: 15px 50px;
+    }
+
+    @include for-size(mobile) {
+        padding: 15px 30px;
+    }
+
+    .navbar-left {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+
+        #title {
+            width: 199.414px;
+            height: 19.8px;
+            margin-top: 5px;
+        }
+
+        #icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        @include for-size(tablet) {
+
+            #title {
+                width: 149.56px;
+                height: 14.85px;
+            }
+        }
+    }
+
+    .navbar-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        a {
+            text-decoration: none
+        }
+
+        p {
+            @include text-formatter($white, 600px, 140%, 16px);
+            cursor: pointer;
+        }
+
+        #burger-menu {
+            display: none;
+        }
+
+        @include for-size(tablet) {
+                
+            p {
+                display: none;
+            }
+    
+            button {
+                display: none;
+            }
+    
+            #burger-menu {
+                display: initial;
+            }
+        }
+    }
+}
