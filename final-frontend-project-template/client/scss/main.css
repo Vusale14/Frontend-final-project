@@ -259,6 +259,21 @@ button:hover {
 .navbar .navbar-right a {
   text-decoration: none;
 }
+.navbar .navbar-right a {
+  color: #FFF;
+  font-weight: 600px;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+  cursor: pointer;
+}
+.navbar .navbar-right a:hover {
+  color: #FFF;
+}
+.navbar .navbar-right a:hover {
+  color: rgba(255, 255, 255, 0.274);
+}
 .navbar .navbar-right p {
   color: #FFF;
   font-weight: 600px;
@@ -2601,4 +2616,402 @@ body .wrapper8 .box-right.second p:hover {
 }
 .third-section .cards .card .card-middle .card-bottom .card-bottom-right p:hover {
   color: #FFF;
+}
+
+.first-section .first-part {
+  width: 1050px;
+  margin: auto;
+  padding: 80px 0;
+}
+@media screen and (max-width: 1050px) {
+  .first-section .first-part {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .first-section .first-part {
+    width: 315px;
+  }
+}
+.first-section .first-part h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 110%;
+  font-size: 51px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 10px;
+}
+.first-section .first-part h2:hover {
+  color: #FFF;
+}
+.first-section .first-part p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 30px;
+}
+.first-section .first-part p:hover {
+  color: #FFF;
+}
+.first-section .first-part .search {
+  position: relative;
+}
+.first-section .first-part .search input {
+  width: 1050px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.161);
+  border-radius: 20px;
+  padding: 12px 20px;
+  background-color: transparent;
+}
+.first-section .first-part .search img {
+  position: absolute;
+  top: 16px;
+  right: -610px;
+}
+
+.solid {
+  border: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.second-section {
+  width: 1050px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1050px) {
+  .second-section {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .second-section {
+    width: 315px;
+  }
+}
+.second-section .created {
+  display: flex;
+  gap: 16px;
+}
+.second-section .created p {
+  color: #858584;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  cursor: pointer;
+}
+.second-section .created p:hover {
+  color: #858584;
+}
+.second-section .created p:hover {
+  color: #FFF;
+}
+.second-section .created .circle1 {
+  width: 50px;
+  height: 32px;
+  border: 1px solid #858584;
+  border-radius: 20px;
+  background: #858584;
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+}
+.second-section .created .circle1 p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.second-section .created .circle1 p:hover {
+  color: #FFF;
+}
+.second-section .collections {
+  display: flex;
+  gap: 16px;
+}
+.second-section .collections p {
+  color: #858584;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  cursor: pointer;
+}
+.second-section .collections p:hover {
+  color: #858584;
+}
+.second-section .collections p:hover {
+  color: #FFF;
+}
+.second-section .collections .circle2 {
+  width: 40px;
+  height: 32px;
+  border: 1px solid #858584;
+  border-radius: 20px;
+  background: #858584;
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+}
+.second-section .collections .circle2 p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.second-section .collections .circle2 p:hover {
+  color: #FFF;
+}
+
+.third-section {
+  background-color: #3B3B3B;
+}
+.third-section .cards {
+  width: 1050px;
+  margin: auto;
+}
+@media screen and (max-width: 1050px) {
+  .third-section .cards {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .third-section .cards {
+    width: 315px;
+  }
+}
+.third-section .cards .card {
+  width: 330px;
+  height: 469px;
+  background-color: #2B2B2B;
+  margin-top: -20px;
+}
+
+.section-first .first-part {
+  width: 1050px;
+  margin: auto;
+  padding: 80px 0;
+}
+@media screen and (max-width: 1050px) {
+  .section-first .first-part {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-first .first-part {
+    width: 315px;
+  }
+}
+.section-first .first-part h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 110%;
+  font-size: 51px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-bottom: 10px;
+}
+.section-first .first-part h2:hover {
+  color: #FFF;
+}
+.section-first .first-part p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.section-first .first-part p:hover {
+  color: #FFF;
+}
+
+.section-second {
+  width: 1050px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1050px) {
+  .section-second {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-second {
+    width: 315px;
+  }
+}
+.section-second p {
+  color: #858584;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  cursor: pointer;
+}
+.section-second p:hover {
+  color: #858584;
+}
+.section-second p:hover {
+  color: #FFF;
+}
+
+.section-third .information {
+  width: 1050px;
+  margin: auto;
+  padding: 40px 0;
+}
+@media screen and (max-width: 1050px) {
+  .section-third .information {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-third .information {
+    width: 315px;
+  }
+}
+.section-third .information .filter-box {
+  width: 1050px;
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 100px 12px 20px;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.219);
+}
+.section-third .information .filter-box .left-part {
+  display: flex;
+  gap: 20px;
+}
+.section-third .information .filter-box .left-part h6 {
+  color: #858584;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px "Space Mono";
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.section-third .information .filter-box .left-part h6:hover {
+  color: #858584;
+}
+.section-third .information .filter-box .right-part {
+  display: flex;
+  gap: 120px;
+}
+.section-third .information .filter-box .right-part p {
+  color: #858584;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px "Space Mono";
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.section-third .information .filter-box .right-part p:hover {
+  color: #858584;
+}
+.section-third .information .mini-card {
+  width: 1050px;
+  height: 84px;
+  display: flex;
+  padding: 12px 20px;
+  background-color: #3B3B3B;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 100px;
+}
+.section-third .information .mini-card .left {
+  width: 430px;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+.section-third .information .mini-card .left .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #2B2B2B;
+  position: absolute;
+  left: -5px;
+  top: 15px;
+}
+.section-third .information .mini-card .left .circle span {
+  color: #858584;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.section-third .information .mini-card .left .circle span:hover {
+  color: #858584;
+}
+.section-third .information .mini-card .left img {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 35px;
+}
+.section-third .information .mini-card .left h2 {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  margin-left: 80px;
+}
+.section-third .information .mini-card .left h2:hover {
+  color: #FFF;
+}
+.section-third .information .mini-card .right {
+  width: 520px;
+  height: 22;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px 0 0;
+  gap: 20px;
+}
+.section-third .information .mini-card .right > p {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.section-third .information .mini-card .right > p:hover {
+  color: #FFF;
+}
+.section-third .information .mini-card .right #number1 {
+  color: #00AC4F;
+  margin-left: -15px;
 }

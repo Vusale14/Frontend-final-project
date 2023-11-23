@@ -1,0 +1,144 @@
+.section-first {
+
+    .first-part {
+        @include container;
+        padding: 80px 0;
+
+        h2 {
+            @include text-formatter($white, 600, 110%, 51px);
+            margin-bottom: 10px;
+        }
+
+        p {
+            @include text-formatter($white, 400, 160%, 22px);
+        }
+    }
+}
+
+.section-second {
+    @include container;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    p {
+        @include text-formatter($grey, 600,140%, 22px);
+        cursor: pointer;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.section-third {
+
+    .information {
+        @include container;
+        padding: 40px 0;
+
+        .filter-box {
+            width: 1050px;
+            height: 46px;
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 100px 12px 20px;
+            align-items: center;
+            background-color: transparent;
+            border-radius: 20px;
+            border: 1px solid rgba(128, 128, 128, 0.219);
+
+            .left-part {
+                display: flex;
+                gap: 20px;
+
+                h6 {
+                    @include text-formatter($grey, 400, 140%, 16px "Space Mono");
+                }
+            }
+
+            .right-part {
+                display: flex;
+                gap: 120px;
+
+                p {
+                    @include text-formatter($grey, 400, 140%, 16px "Space Mono");
+                }
+            }
+    
+        }
+
+        .mini-card {
+            width: 1050px;
+            height: 84px;
+            display: flex;
+            padding: 12px 20px;
+            background-color: $middle-grey;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            gap: 100px;
+
+            .left {
+                width: 430px;
+                height: 60px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 20px;
+                position: relative;
+
+                .circle {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 20px;
+                    background-color: $dark-grey;
+                    position: absolute;
+                    left: -5px;
+                    top: 15px;
+    
+                    span {
+                        @include text-formatter($grey, 400, 140%, 16px, "Space Mono");
+                    }
+                }
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    position: absolute;
+                    left: 35px;
+                  }
+  
+                  h2 {
+                      @include text-formatter($white, 600, 140%, 22px);
+                      margin-left: 80px;
+                  }
+            }
+
+            .right {
+                width: 520px;
+                height: 22;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 60px 0 0;
+                gap: 20px;
+                
+                > p {
+                    @include text-formatter($white, 400, 140%, 16px, "Space Mono");
+                }
+
+                #number1 {
+                    color: $green;
+                    margin-left: -15px;
+                }
+
+            }
+                    
+        }
+    }
+}

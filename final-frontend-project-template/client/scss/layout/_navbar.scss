@@ -53,6 +53,15 @@
             text-decoration: none
         }
 
+        a {
+            @include text-formatter($white, 600px, 140%, 16px);
+            cursor: pointer;
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.274);
+            }
+        }
+
         p {
             @include text-formatter($white, 600px, 140%, 16px);
             cursor: pointer;
