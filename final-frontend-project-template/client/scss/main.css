@@ -62,6 +62,11 @@ html {
   width: 425px;
   position: relative;
 }
+@media screen and (max-width: 1050px) {
+  .search {
+    display: none;
+  }
+}
 .search input {
   width: 100%;
   height: 60px;
@@ -321,6 +326,11 @@ button:hover {
     width: 315px;
   }
 }
+@media screen and (max-width: 1050px) {
+  .footer .container {
+    flex-direction: column;
+  }
+}
 .footer .container .left-side .image {
   display: flex;
   gap: 12px;
@@ -365,6 +375,11 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 1050px) {
+  .footer .container .middle-side {
+    padding: 30px 0;
+  }
+}
 .footer .container .middle-side h2 {
   color: #FFF;
   font-weight: 700;
@@ -377,6 +392,11 @@ button:hover {
 .footer .container .middle-side h2:hover {
   color: #FFF;
 }
+@media screen and (max-width: 1050px) {
+  .footer .container .middle-side h2 {
+    padding: 0 0 20px 0;
+  }
+}
 .footer .container .middle-side span {
   color: #CCC;
   font-weight: 400;
@@ -384,6 +404,7 @@ button:hover {
   font-size: 16px;
   font-family: "Work Sans";
   font-style: normal;
+  padding: 20px 0 0 0;
 }
 .footer .container .middle-side span:hover {
   color: #CCC;
@@ -417,6 +438,76 @@ button:hover {
 }
 .footer .container .right-side > p:hover {
   color: #CCC;
+}
+@media screen and (max-width: 1050px) {
+  .footer .container .right-side > p {
+    display: none;
+  }
+}
+.footer .container .right-side #responsive-text {
+  display: none;
+}
+@media screen and (max-width: 1050px) {
+  .footer .container .right-side #responsive-text {
+    display: initial;
+    margin-bottom: 20px;
+  }
+}
+.footer .container .right-side .search {
+  width: 425px;
+  position: relative;
+}
+@media screen and (max-width: 1050px) {
+  .footer .container .right-side .search {
+    display: initial;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .footer .container .right-side .search {
+    display: none;
+  }
+}
+.footer .container .right-side .search input {
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 0 0 20px;
+}
+@media screen and (max-width: 1050px) {
+  .footer .container .right-side .search input {
+    width: 420px;
+    height: 60px;
+    margin-top: 20px;
+  }
+}
+.footer .container .right-side .search button {
+  width: 211px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 1050px) {
+  .footer .container .right-side .search button {
+    width: 179px;
+    height: 61px;
+    top: -20px;
+  }
+}
+.footer .container .right-side .search button span {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.footer .container .right-side .search button span:hover {
+  color: #FFF;
+}
+.footer .container .right-side .search button:hover {
+  background-color: rgba(128, 0, 128, 0.257);
 }
 .footer .container-end {
   width: 1050px;
@@ -1984,11 +2075,22 @@ body .wrapper8 .box {
     width: 690px;
     height: 360px;
     padding: 40px 30px;
+    gap: 30px;
   }
 }
 @media screen and (max-width: 690px) {
   body .wrapper8 .box {
     display: none;
+  }
+}
+body .wrapper8 .box .box-left {
+  width: 425px;
+  height: 310px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper8 .box .box-left {
+    width: 300px;
+    height: 280px;
   }
 }
 body .wrapper8 .box .box-left img {
@@ -1997,6 +2099,16 @@ body .wrapper8 .box .box-left img {
 }
 @media screen and (max-width: 1050px) {
   body .wrapper8 .box .box-left img {
+    width: 300px;
+    height: 280px;
+  }
+}
+body .wrapper8 .box .box-right {
+  width: 425px;
+  height: 272px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper8 .box .box-right {
     width: 300px;
     height: 280px;
   }
@@ -2051,6 +2163,64 @@ body .wrapper8 .box .box-right p:hover {
     color: #FFF;
   }
 }
+body .wrapper8 .box .box-right .search2 {
+  display: none;
+  width: 425px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper8 .box .box-right .search2 {
+    display: initial;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 .box .box-right .search2 {
+    display: initial;
+  }
+}
+body .wrapper8 .box .box-right .search2 input {
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 0 0 20px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper8 .box .box-right .search2 input {
+    width: 300px;
+    height: 46px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 .box .box-right .search2 input {
+    width: 315px;
+    height: 46px;
+  }
+}
+body .wrapper8 .box .box-right .search2 button {
+  width: 211px;
+}
+@media screen and (max-width: 1050px) {
+  body .wrapper8 .box .box-right .search2 button {
+    width: 300px;
+    height: 46px;
+  }
+}
+body .wrapper8 .box .box-right .search2 button span {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper8 .box .box-right .search2 button span:hover {
+  color: #FFF;
+}
+body .wrapper8 .box .box-right .search2 button:hover {
+  background-color: rgba(128, 0, 128, 0.257);
+}
 body .wrapper8 .box-left.second {
   display: none;
 }
@@ -2098,6 +2268,102 @@ body .wrapper8 .box-right.second p {
 }
 body .wrapper8 .box-right.second p:hover {
   color: #FFF;
+}
+body .wrapper8 .search2 {
+  display: none;
+  width: 425px;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 .search2 {
+    display: initial;
+  }
+}
+body .wrapper8 .search2 input {
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 0 0 20px;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 .search2 input {
+    width: 315px;
+    height: 46px;
+    padding: 16px 20px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+}
+body .wrapper8 .search2 button {
+  width: 211px;
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 .search2 button {
+    width: 315px;
+    height: 46px;
+  }
+}
+body .wrapper8 .search2 button span {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .wrapper8 .search2 button span:hover {
+  color: #FFF;
+}
+body .wrapper8 .search2 button:hover {
+  background-color: rgba(128, 0, 128, 0.257);
+}
+body .footer .search2 {
+  display: none;
+  width: 425px;
+}
+@media screen and (max-width: 690px) {
+  body .footer .search2 {
+    display: initial;
+  }
+}
+body .footer .search2 input {
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 0 0 20px;
+}
+@media screen and (max-width: 690px) {
+  body .footer .search2 input {
+    width: 315px;
+    height: 46px;
+    padding: 16px 20px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+}
+body .footer .search2 button {
+  width: 211px;
+}
+@media screen and (max-width: 690px) {
+  body .footer .search2 button {
+    width: 315px;
+    height: 46px;
+  }
+}
+body .footer .search2 button span {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+body .footer .search2 button span:hover {
+  color: #FFF;
+}
+body .footer .search2 button:hover {
+  background-color: rgba(128, 0, 128, 0.257);
 }
 
 .middle-side {
