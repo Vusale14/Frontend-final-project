@@ -215,6 +215,7 @@ body {
 
                 .middle-side {
                     display: flex;
+                    flex-direction: row;
                     gap: 15px;
                     margin-bottom: 15px;
 
@@ -1195,7 +1196,7 @@ body {
     }
 
     .footer {
-        
+
         .search2 {
             display: none;
             width: 425px;

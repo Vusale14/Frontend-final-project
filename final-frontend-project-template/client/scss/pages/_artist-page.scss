@@ -7,6 +7,16 @@
             width: 100%;
             height: 320px;
             padding: 20px 0 0 0;
+
+            @include for-size(tablet) {
+                width: 100%;
+                height: 280px;
+            }
+
+            @include for-size(mobile) {
+                width: 100%;
+                height: 250px;
+            }
         }
     }
 
@@ -19,7 +29,16 @@
             top: 255px;
             left: 170px;
             border: 2px solid $dark-grey;
-            border-radius: 20px
+            border-radius: 20px;
+
+            @include for-size(tablet) {
+                top: 220px;
+            }
+
+            @include for-size(mobile) {
+                top: 185px;
+                left: 250px;
+            }
         }
     }
 }
@@ -30,62 +49,213 @@
     display: flex;
     gap: 100px;
 
+    @include for-size(tablet) {
+        padding: 30px;
+        margin-top: 50px;
+        flex-direction: column;
+    }
+
     .left-side {
         width: 599px;
         height: 377px;
 
+        @include for-size(tablet) {
+            width: 690px;
+            height: 393px;
+        }
+
+        @include for-size(mobile) {
+            width: 375px;
+            height: 526px;
+        }
+
+        .right-side2 {
+            display: none;
+
+            @include for-size(tablet) {
+                display: flex;
+                margin-top: 20px;
+                gap: 20px;
+            }
+
+            @include for-size(mobile) {
+                flex-direction: column;
+            }
+
+            #btn1 {
+                width: 186px;
+                height: 66px;
+
+                @include for-size(mobile) {
+                    width: 315px;
+                    height: 60px;
+                    margin-top: -10px;
+                }
+            }
+
+            #btn2 {
+                width: 145px;
+                height: 60px;
+                margin-top: 3px;
+                background-color: transparent;
+                border: 2px solid $purple;
+
+                @include for-size(mobile) {
+                    width: 315px;
+                    height: 60px;
+                    margin-top: -5px
+                }
+
+                p {
+                    @include text-formatter($purple, 600, 140%, 16px);
+                }
+
+                @include text-formatter($white, 600, 140%, 16px);
+            }
+        }
+
         h2 {
             @include text-formatter($white, 600, 110%, 51px);
-        }
 
-        .numbers {
-            display: flex;
-            justify-content: space-between;
-            padding: 30px 0 0 0;
-
-            > span {
-                @include text-formatter($white, 700, 140%, 28px, "Space Mono");
+            @include for-size(tablet) {
+                @include text-formatter($white, 600, 120%, 38px);
+                margin-top: -10px;
             }
 
-            #three-hundred {
-                padding: 0 150px 0 0;
+            @include for-size(mobile) {
+                margin-top: -15px;
             }
         }
 
-        .volume {
+        .static {
             display: flex;
-            gap: 117px;
-            margin-bottom: 30px;
+            width: 510px;
+            height: 74px;
+            gap: 20px;
+            padding: 30px 0;
 
+            @include for-size(tablet) {
+                width: 510px;
+                height: 57px;
+            }
+
+            @include for-size(mobile) {
+                width: 315px;
+                height: 57px;
+            }
+
+            h6 {
+                @include text-formatter($white, 700, 140%, 28px);
+
+                @include for-size(tablet) {
+                    @include text-formatter($white, 700, 160%, 22px);
+                }
+            }
+
+            p {
+                @include text-formatter($white, 400, 160%, 22px);
+
+                @include for-size(tablet) {
+                    @include text-formatter($white, 400, 140%, 16px);
+                }
+            }
+
+            .volume {
+                width: 157px;
+                height: 74px;
+                flex-direction: column;
+
+                @include for-size(tablet) {
+                    height: 57px;
+                }
+
+                @include for-size(mobile) {
+                    width: 92px;
+                }
+            }
+
+            .sold {
+                width: 157px;
+                height: 74px;
+                flex-direction: column;
+
+                @include for-size(tablet) {
+                    height: 57px;
+                }
+
+                @include for-size(mobile) {
+                    width: 91px;
+                }
+            }
+
+            .followers {
+                width: 157px;
+                height: 74px;
+                flex-direction: column;
+
+                @include for-size(tablet) {
+                    height: 57px;
+                }
+
+                @include for-size(mobile) {
+                    width: 91px;
+                }
+            }
+        }
+
+        .bio {
+            padding: 60px 0 30px 0;
+
+            > h6 {
+                @include text-formatter($grey, 700, 160%, 22px, "Space Mono");
+                margin-bottom: 10px;
+    
+                @include for-size(tablet) {
+                    @include text-formatter($grey, 400, 140%, 16px, "Space Mono");
+                }
+            }
+    
             > p {
                 @include text-formatter($white, 400, 160%, 22px);
+    
+                @include for-size(tablet) {
+                    @include text-formatter($white, 400, 140%, 16px, "Space Mono");
+                }
+            }
+        }
+
+        .links {
+
+            > h6 {
+                @include text-formatter($grey, 700, 160%, 22px, "Space Mono");
+                margin-bottom: 10px;
+    
+                @include for-size(tablet) {
+                    @include text-formatter($grey, 400, 140%, 16px, "Space Mono");
+                }
             }
 
-            #followers {
-                margin-left: -60px;
+            .icons {
+                width: 32px;
+                height: 32px;
+                display: flex;
+                gap: 10px;
+
+                @include for-size(tablet) {
+                    width: 24px;
+                    height: 24px;
+                }
             }
-        }
-
-        > span {
-            @include text-formatter($grey, 700, 160%, 22px, "Space Mono");
-        }
-
-        > p {
-            @include text-formatter($white, 400, 160%, 22px);
-            margin-bottom: 30px;
-            margin-top: 10px;
-        }
-
-        .icons {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px
         }
     }
 
     .right-side {
         display: flex;
         gap: 20px;
+
+        @include for-size(tablet) {
+            display: none;
+        }
 
         #btn1 {
             width: 186px;
@@ -119,6 +289,10 @@
     margin-top: 10px;
     margin-bottom: 10px;
 
+    @include for-size(mobile) {
+        gap: 10px;
+    }
+
     .created {
         display: flex;
         gap: 16px;
@@ -126,6 +300,10 @@
         p {
             @include text-formatter($grey, 600,140%, 22px);
             cursor: pointer;
+
+            @include for-size(tablet) {
+                @include text-formatter($grey, 600, 140%, 16px);
+            }
 
             &:hover {
                 color: $white;
@@ -141,6 +319,10 @@
             display: flex;
             padding: 5px 10px;
             align-items: center;
+
+            @include for-size(mobile) {
+                display: none;
+            }
 
             p {
                 @include text-formatter($white, 400, 140%, 16px, "Space Mono");
@@ -171,6 +353,10 @@
             padding: 5px 10px;
             align-items: center;
 
+            @include for-size(mobile) {
+                display: none;
+            }
+
             p {
                 @include text-formatter($white, 400, 140%, 16px, "Space Mono");
             }
@@ -200,6 +386,10 @@
             padding: 5px 10px;
             align-items: center;
 
+            @include for-size(mobile) {
+                display: none;
+            }
+
             p {
                 @include text-formatter($white, 400, 140%, 16px, "Space Mono");
             }
@@ -216,10 +406,23 @@
         display: grid;
         grid-template-columns: repeat(3, 3fr);
 
+        @include for-size(tablet) {
+            grid-template-columns: repeat(2, 3fr);
+        }
+
+        @include for-size(mobile) {
+            grid-template-columns: repeat(1, 3fr);
+        }
+
         .card {
             width: 330px;
             height: 469px;
             background-color: $dark-grey;
+
+            @include for-size(mobile) {
+                width: 315px;
+                height: 402px;
+            }
 
             .card-top {
                 width: 330px;
@@ -277,5 +480,21 @@
                 }
             }
         }
+
+        .card.passiv {
+            @include for-size(tablet) {
+                display: none;
+            }
+        }
+
+        .card.second {
+            @include for-size(mobile) {
+                display: none;
+            }
+        }
     }
+}
+
+.solid2 {
+    border-bottom: 2px solid $dark-grey;
 }

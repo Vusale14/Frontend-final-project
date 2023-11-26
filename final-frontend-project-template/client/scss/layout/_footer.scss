@@ -101,6 +101,10 @@
                     display: initial;
                     margin-bottom: 20px;              
                 }
+
+                @include for-size(mobile) {
+                    display: initial;
+                }
             }
 
             .search {
