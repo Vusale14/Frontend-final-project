@@ -21,20 +21,20 @@ body {
             .hero-section-left {
 
                 h1 {
-                    @include text-formatter($white, 600px, 110%, 67px,);
+                    @include text-formatter($white, 600, 110%, 67px,);
                     margin-bottom: 20px;
 
                     @include for-size(tablet) {
-                        @include text-formatter($white, 600px, 120%, 38px,);
+                        @include text-formatter($white, 600, 120%, 38px,);
                     }
                 }
 
                 > p {
-                    @include text-formatter($white, 400px, 160%, 22px);
+                    @include text-formatter($white, 400, 160%, 22px);
                     margin-bottom: 30px;
 
                     @include for-size(tablet) {
-                        @include text-formatter($white, 400px, 140%, 16px);
+                        @include text-formatter($white, 400, 140%, 16px);
                     }
                 }
     
@@ -43,7 +43,7 @@ body {
                     margin-bottom: 30px;
     
                     > p {
-                        @include text-formatter($white, 600px, 140%, 16px);
+                        @include text-formatter($white, 600, 140%, 16px);
                     }
                 }
     
@@ -52,17 +52,17 @@ body {
                     gap: 60px;
     
                     span {
-                        @include text-formatter($white, 700px, 140%, 28px, "Space Mono");
+                        @include text-formatter($white, 700, 140%, 28px, "Space Mono");
 
                         @include for-size(tablet) {
-                            @include text-formatter($white, 700px, 160%, 22px, "Space Mono");
+                            @include text-formatter($white, 700, 160%, 22px, "Space Mono");
                         }
 
                         p {
-                            @include text-formatter($white, 400px, 160%, 24px);
+                            @include text-formatter($white, 400, 160%, 24px);
     
                             @include for-size(tablet) {
-                                @include text-formatter($white, 400px, 140%, 16px)
+                                @include text-formatter($white, 400, 140%, 16px)
                             }
                         }
                     }
@@ -101,15 +101,15 @@ body {
             .hero-section-first {
 
                 h1 {
-                    @include text-formatter($white, 600px, 110%, 67px,);
+                    @include text-formatter($white, 600, 110%, 67px,);
 
                       @include for-size(mobile) {
-                        @include text-formatter($white, 600px, 140%, 28px,);
+                        @include text-formatter($white, 600, 140%, 28px,);
                       }
                   }
     
                 > p {
-                    @include text-formatter($white, 400px, 160%, 22px);
+                    @include text-formatter($white, 400, 160%, 22px);
                 }
             }
         
@@ -139,7 +139,7 @@ body {
                     }
     
                     > p {
-                        @include text-formatter($white, 600px, 140%, 16px)
+                        @include text-formatter($white, 600, 140%, 16px)
                     }
                 }
     
@@ -152,14 +152,14 @@ body {
                     }
     
                     span {
-                        @include text-formatter($white, 700px, 140%, 28px, "Space Mono");
+                        @include text-formatter($white, 700, 140%, 28px, "Space Mono");
 
                         @include for-size(mobile) {
                             @include text-formatter($white, 700, 160%, 22px);
                         }
 
                         p {
-                            @include text-formatter($white, 400px, 160%, 24px);
+                            @include text-formatter($white, 400, 160%, 24px);
     
                             @include for-size(mobile) {
                                 @include text-formatter($white, 400, 140%, 16px);
@@ -717,6 +717,7 @@ body {
                 @include for-size(tablet) {
                     display: none;
                     height: 630px;
+                    object-fit: cover;
                 }
 
                 @include for-size(mobile) {

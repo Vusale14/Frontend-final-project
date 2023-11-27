@@ -55,7 +55,7 @@ table {
 }
 
 html {
-  font-family: "Inter";
+  font-family: "Work Sans";
 }
 
 .search {
@@ -295,7 +295,7 @@ button:hover {
   display: none;
 }
 @media screen and (max-width: 1050px) {
-  .navbar .navbar-right p {
+  .navbar .navbar-right a {
     display: none;
   }
   .navbar .navbar-right button {
@@ -304,6 +304,65 @@ button:hover {
   .navbar .navbar-right #burger-menu {
     display: initial;
   }
+}
+.navbar .sidebar {
+  display: none;
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: grey;
+  padding: 10px 0;
+}
+@media screen and (max-width: 1050px) {
+  .navbar .sidebar {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.navbar .sidebar .fa-xmark {
+  margin-top: -300px;
+  margin-left: 260px;
+}
+.navbar .sidebar a {
+  text-decoration: none;
+}
+.navbar .sidebar a {
+  color: #FFF;
+  font-weight: 600px;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+  padding: 20px;
+  cursor: pointer;
+}
+.navbar .sidebar a:hover {
+  color: #FFF;
+}
+.navbar .sidebar a:hover {
+  color: rgba(255, 255, 255, 0.274);
+}
+.navbar .sidebar p {
+  color: #FFF;
+  font-weight: 600px;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+  cursor: pointer;
+}
+.navbar .sidebar p:hover {
+  color: #FFF;
+}
+.navbar .sidebar button {
+  margin-left: -10px;
+}
+
+.open {
+  right: -100px;
 }
 
 .footer {
@@ -579,7 +638,7 @@ body .wrapper .hero-section {
 }
 body .wrapper .hero-section .hero-section-left h1 {
   color: #FFF;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 110%;
   font-size: 67px;
   font-family: "Work Sans";
@@ -592,7 +651,7 @@ body .wrapper .hero-section .hero-section-left h1:hover {
 @media screen and (max-width: 1050px) {
   body .wrapper .hero-section .hero-section-left h1 {
     color: #FFF;
-    font-weight: 600px;
+    font-weight: 600;
     line-height: 120%;
     font-size: 38px;
     font-family: "Work Sans";
@@ -604,7 +663,7 @@ body .wrapper .hero-section .hero-section-left h1:hover {
 }
 body .wrapper .hero-section .hero-section-left > p {
   color: #FFF;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 160%;
   font-size: 22px;
   font-family: "Work Sans";
@@ -617,7 +676,7 @@ body .wrapper .hero-section .hero-section-left > p:hover {
 @media screen and (max-width: 1050px) {
   body .wrapper .hero-section .hero-section-left > p {
     color: #FFF;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 140%;
     font-size: 16px;
     font-family: "Work Sans";
@@ -633,7 +692,7 @@ body .wrapper .hero-section .hero-section-left button {
 }
 body .wrapper .hero-section .hero-section-left button > p {
   color: #FFF;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 140%;
   font-size: 16px;
   font-family: "Work Sans";
@@ -648,7 +707,7 @@ body .wrapper .hero-section .hero-section-left .statistics {
 }
 body .wrapper .hero-section .hero-section-left .statistics span {
   color: #FFF;
-  font-weight: 700px;
+  font-weight: 700;
   line-height: 140%;
   font-size: 28px;
   font-family: "Space Mono";
@@ -660,7 +719,7 @@ body .wrapper .hero-section .hero-section-left .statistics span:hover {
 @media screen and (max-width: 1050px) {
   body .wrapper .hero-section .hero-section-left .statistics span {
     color: #FFF;
-    font-weight: 700px;
+    font-weight: 700;
     line-height: 160%;
     font-size: 22px;
     font-family: "Space Mono";
@@ -672,7 +731,7 @@ body .wrapper .hero-section .hero-section-left .statistics span:hover {
 }
 body .wrapper .hero-section .hero-section-left .statistics span p {
   color: #FFF;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 160%;
   font-size: 24px;
   font-family: "Work Sans";
@@ -684,7 +743,7 @@ body .wrapper .hero-section .hero-section-left .statistics span p:hover {
 @media screen and (max-width: 1050px) {
   body .wrapper .hero-section .hero-section-left .statistics span p {
     color: #FFF;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 140%;
     font-size: 16px;
     font-family: "Work Sans";
@@ -724,7 +783,7 @@ body .wrapper .hero-section2 {
 }
 body .wrapper .hero-section2 .hero-section-first h1 {
   color: #FFF;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 110%;
   font-size: 67px;
   font-family: "Work Sans";
@@ -736,7 +795,7 @@ body .wrapper .hero-section2 .hero-section-first h1:hover {
 @media screen and (max-width: 690px) {
   body .wrapper .hero-section2 .hero-section-first h1 {
     color: #FFF;
-    font-weight: 600px;
+    font-weight: 600;
     line-height: 140%;
     font-size: 28px;
     font-family: "Work Sans";
@@ -748,7 +807,7 @@ body .wrapper .hero-section2 .hero-section-first h1:hover {
 }
 body .wrapper .hero-section2 .hero-section-first > p {
   color: #FFF;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 160%;
   font-size: 22px;
   font-family: "Work Sans";
@@ -782,7 +841,7 @@ body .wrapper .hero-section2 .hero-section-third button {
 }
 body .wrapper .hero-section2 .hero-section-third button > p {
   color: #FFF;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 140%;
   font-size: 16px;
   font-family: "Work Sans";
@@ -802,7 +861,7 @@ body .wrapper .hero-section2 .hero-section-third .statistics {
 }
 body .wrapper .hero-section2 .hero-section-third .statistics span {
   color: #FFF;
-  font-weight: 700px;
+  font-weight: 700;
   line-height: 140%;
   font-size: 28px;
   font-family: "Space Mono";
@@ -826,7 +885,7 @@ body .wrapper .hero-section2 .hero-section-third .statistics span:hover {
 }
 body .wrapper .hero-section2 .hero-section-third .statistics span p {
   color: #FFF;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 160%;
   font-size: 24px;
   font-family: "Work Sans";
@@ -1649,6 +1708,8 @@ body .wrapper6 .mushroom #mushroom-image1 {
   body .wrapper6 .mushroom #mushroom-image1 {
     display: none;
     height: 630px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media screen and (max-width: 690px) {
@@ -2827,6 +2888,23 @@ body .footer .search2 button:hover {
 .background-picture {
   position: relative;
 }
+.background-picture img {
+  width: 100%;
+  height: 320px;
+  padding: 20px 0 0 0;
+}
+@media screen and (max-width: 1050px) {
+  .background-picture img {
+    width: 100%;
+    height: 280px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .background-picture img {
+    width: 100%;
+    height: 250px;
+  }
+}
 .background-picture .top img {
   width: 100%;
   height: 320px;
@@ -2848,9 +2926,8 @@ body .footer .search2 button:hover {
   width: 120px;
   height: 120px;
   position: absolute;
-  top: 255px;
+  top: 245px;
   left: 170px;
-  border: 2px solid #2B2B2B;
   border-radius: 20px;
 }
 @media screen and (max-width: 1050px) {
@@ -2887,6 +2964,11 @@ body .footer .search2 button:hover {
     padding: 30px;
     margin-top: 50px;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 690px) {
+  .first-section {
+    margin-left: 90px;
   }
 }
 .first-section .left-side {
@@ -3992,6 +4074,16 @@ body .footer .search2 button:hover {
     width: 315px;
   }
 }
+@media screen and (max-width: 1050px) {
+  .section-first .first-part {
+    padding: 40px 0;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-first .first-part {
+    padding: 30px 0;
+  }
+}
 .section-first .first-part h2 {
   color: #FFF;
   font-weight: 600;
@@ -4004,6 +4096,32 @@ body .footer .search2 button:hover {
 .section-first .first-part h2:hover {
   color: #FFF;
 }
+@media screen and (max-width: 1050px) {
+  .section-first .first-part h2 {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 120%;
+    font-size: 38px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  .section-first .first-part h2:hover {
+    color: #FFF;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .section-first .first-part h2 {
+    color: #FFF;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 28px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  .section-first .first-part h2:hover {
+    color: #FFF;
+  }
+}
 .section-first .first-part p {
   color: #FFF;
   font-weight: 400;
@@ -4014,6 +4132,19 @@ body .footer .search2 button:hover {
 }
 .section-first .first-part p:hover {
   color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  .section-first .first-part p {
+    color: #FFF;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  .section-first .first-part p:hover {
+    color: #FFF;
+  }
 }
 
 .section-second {
@@ -4034,6 +4165,11 @@ body .footer .search2 button:hover {
     width: 315px;
   }
 }
+@media screen and (max-width: 690px) {
+  .section-second {
+    display: none;
+  }
+}
 .section-second p {
   color: #858584;
   font-weight: 600;
@@ -4046,7 +4182,72 @@ body .footer .search2 button:hover {
 .section-second p:hover {
   color: #858584;
 }
+@media screen and (max-width: 1050px) {
+  .section-second p {
+    color: #858584;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  .section-second p:hover {
+    color: #858584;
+  }
+}
 .section-second p:hover {
+  color: #FFF;
+}
+
+.section-second2 {
+  display: none;
+  width: 1050px;
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1050px) {
+  .section-second2 {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-second2 {
+    width: 315px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-second2 {
+    display: flex;
+  }
+}
+.section-second2 p {
+  color: #858584;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 22px;
+  font-family: "Work Sans";
+  font-style: normal;
+  cursor: pointer;
+}
+.section-second2 p:hover {
+  color: #858584;
+}
+@media screen and (max-width: 1050px) {
+  .section-second2 p {
+    color: #858584;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  .section-second2 p:hover {
+    color: #858584;
+  }
+}
+.section-second2 p:hover {
   color: #FFF;
 }
 
@@ -4076,9 +4277,26 @@ body .footer .search2 button:hover {
   border-radius: 20px;
   border: 1px solid rgba(128, 128, 128, 0.219);
 }
+@media screen and (max-width: 1050px) {
+  .section-third .information .filter-box {
+    width: 690px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-third .information .filter-box {
+    width: 315px;
+    padding: 12px 0;
+    justify-content: space-around;
+  }
+}
 .section-third .information .filter-box .left-part {
   display: flex;
   gap: 20px;
+}
+@media screen and (max-width: 690px) {
+  .section-third .information .filter-box .left-part {
+    gap: 10px;
+  }
 }
 .section-third .information .filter-box .left-part h6 {
   color: #858584;
@@ -4090,6 +4308,19 @@ body .footer .search2 button:hover {
 }
 .section-third .information .filter-box .left-part h6:hover {
   color: #858584;
+}
+@media screen and (max-width: 690px) {
+  .section-third .information .filter-box .left-part h6 {
+    color: #858584;
+    font-weight: 400;
+    line-height: 110%;
+    font-size: 12px "Space Mono";
+    font-family: "Work Sans";
+    font-style: normal;
+  }
+  .section-third .information .filter-box .left-part h6:hover {
+    color: #858584;
+  }
 }
 .section-third .information .filter-box .right-part {
   display: flex;
@@ -4106,6 +4337,16 @@ body .footer .search2 button:hover {
 .section-third .information .filter-box .right-part p:hover {
   color: #858584;
 }
+@media screen and (max-width: 690px) {
+  .section-third .information .filter-box .right-part #change {
+    display: none;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .section-third .information .filter-box .right-part #sold {
+    display: none;
+  }
+}
 .section-third .information .mini-card {
   width: 1050px;
   height: 84px;
@@ -4117,6 +4358,18 @@ body .footer .search2 button:hover {
   margin-bottom: 20px;
   gap: 100px;
 }
+@media screen and (max-width: 1050px) {
+  .section-third .information .mini-card {
+    width: 690px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-third .information .mini-card {
+    width: 315px;
+    height: 50px;
+  }
+}
 .section-third .information .mini-card .left {
   width: 430px;
   height: 60px;
@@ -4125,6 +4378,18 @@ body .footer .search2 button:hover {
   align-items: center;
   gap: 20px;
   position: relative;
+}
+@media screen and (max-width: 1050px) {
+  .section-third .information .mini-card .left {
+    width: 410px;
+    height: 31px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-third .information .mini-card .left {
+    width: 201px;
+    height: 24px;
+  }
 }
 .section-third .information .mini-card .left .circle {
   display: flex;
@@ -4137,6 +4402,18 @@ body .footer .search2 button:hover {
   position: absolute;
   left: -5px;
   top: 15px;
+}
+@media screen and (max-width: 1050px) {
+  .section-third .information .mini-card .left .circle {
+    width: 24px;
+    height: 24px;
+    top: 5px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-third .information .mini-card .left .circle {
+    top: 0;
+  }
 }
 .section-third .information .mini-card .left .circle span {
   color: #858584;
@@ -4155,6 +4432,12 @@ body .footer .search2 button:hover {
   position: absolute;
   left: 35px;
 }
+@media screen and (max-width: 1050px) {
+  .section-third .information .mini-card .left img {
+    width: 24px;
+    height: 24px;
+  }
+}
 .section-third .information .mini-card .left h2 {
   color: #FFF;
   font-weight: 600;
@@ -4162,10 +4445,29 @@ body .footer .search2 button:hover {
   font-size: 22px;
   font-family: "Work Sans";
   font-style: normal;
-  margin-left: 80px;
+  margin-left: -40px;
 }
 .section-third .information .mini-card .left h2:hover {
   color: #FFF;
+}
+@media screen and (max-width: 1050px) {
+  .section-third .information .mini-card .left h2 {
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-third .information .mini-card .left h2 {
+    color: #FFF;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+    margin-left: 70px;
+  }
+  .section-third .information .mini-card .left h2:hover {
+    color: #FFF;
+  }
 }
 .section-third .information .mini-card .right {
   width: 520px;
@@ -4190,4 +4492,68 @@ body .footer .search2 button:hover {
 .section-third .information .mini-card .right #number1 {
   color: #00AC4F;
   margin-left: -15px;
+}
+@media screen and (max-width: 1050px) {
+  .section-third .information .mini-card .right #number1 {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 690px) {
+  .section-third .information .mini-card .right #number1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .section-third .information .mini-card .right #number2 {
+    display: none;
+  }
+}
+
+.footer .search2 {
+  display: none;
+  width: 425px;
+}
+@media screen and (max-width: 690px) {
+  .footer .search2 {
+    display: initial;
+  }
+}
+.footer .search2 input {
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 0 0 20px;
+}
+@media screen and (max-width: 690px) {
+  .footer .search2 input {
+    width: 315px;
+    height: 46px;
+    padding: 16px 20px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+}
+.footer .search2 button {
+  width: 211px;
+}
+@media screen and (max-width: 690px) {
+  .footer .search2 button {
+    width: 315px;
+    height: 46px;
+  }
+}
+.footer .search2 button span {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  font-style: normal;
+}
+.footer .search2 button span:hover {
+  color: #FFF;
+}
+.footer .search2 button:hover {
+  background-color: rgba(128, 0, 128, 0.257);
 }

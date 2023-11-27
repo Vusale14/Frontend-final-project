@@ -70,10 +70,10 @@
         #burger-menu {
             display: none;
         }
-
+    
         @include for-size(tablet) {
                 
-            p {
+            a {
                 display: none;
             }
     
@@ -84,6 +84,55 @@
             #burger-menu {
                 display: initial;
             }
+        }    
+    }
+    .sidebar {
+        display: none;
+        width: 200px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: grey;
+        padding: 10px 0;
+
+
+        @include for-size(tablet) {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fa-xmark {
+            margin-top: -300px;
+            margin-left: 260px;
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        a {
+            @include text-formatter($white, 600px, 140%, 16px);
+            padding: 20px;
+            cursor: pointer;
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.274);
+            }
+        }
+
+        p {
+            @include text-formatter($white, 600px, 140%, 16px);
+            cursor: pointer;
+        }
+
+        button {
+            margin-left: -10px;
         }
     }
+}
+
+.open {
+    right: -100px;
 }

@@ -4,13 +4,33 @@
         @include container;
         padding: 80px 0;
 
+        @include for-size(tablet) {
+            padding: 40px 0;
+        }
+
+        @include for-size(mobile) {
+            padding: 30px 0;
+        }
+
         h2 {
             @include text-formatter($white, 600, 110%, 51px);
             margin-bottom: 10px;
+
+            @include for-size(tablet) {
+                @include text-formatter($white, 600, 120%, 38px);
+            }
+
+            @include for-size(tablet) {
+                @include text-formatter($white, 600, 140%, 28px);
+            }
         }
 
         p {
             @include text-formatter($white, 400, 160%, 22px);
+
+            @include for-size(tablet) {
+                @include text-formatter($white, 400, 140%, 16px);
+            }
         }
     }
 }
@@ -22,14 +42,48 @@
     margin-top: 10px;
     margin-bottom: 10px;
 
+    @include for-size(mobile) {
+        display: none;
+    }
+
     p {
         @include text-formatter($grey, 600,140%, 22px);
         cursor: pointer;
+
+        @include for-size(tablet) {
+            @include text-formatter($grey, 600,140%, 16px);
+        }
 
         &:hover {
             color: $white;
         }
     }
+}
+
+.section-second2 {
+    display: none;
+    @include container;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include for-size(mobile) {
+        display: flex;
+    }
+
+    p {
+        @include text-formatter($grey, 600,140%, 22px);
+        cursor: pointer;
+
+        @include for-size(tablet) {
+            @include text-formatter($grey, 600,140%, 16px);
+        }
+
+        &:hover {
+            color: $white;
+        }
+    }
+
 }
 
 .section-third {
@@ -49,12 +103,30 @@
             border-radius: 20px;
             border: 1px solid rgba(128, 128, 128, 0.219);
 
+            @include for-size(tablet) {
+                width: 690px;
+            }
+
+            @include for-size(mobile) {
+                width: 315px;
+                padding: 12px 0;
+                justify-content: space-around;
+            }
+
             .left-part {
                 display: flex;
                 gap: 20px;
 
+                @include for-size(mobile) {
+                    gap: 10px;
+                }
+
                 h6 {
                     @include text-formatter($grey, 400, 140%, 16px "Space Mono");
+
+                    @include for-size(mobile) {
+                        @include text-formatter($grey, 400, 110%, 12px "Space Mono");
+                    }
                 }
             }
 
@@ -64,6 +136,18 @@
 
                 p {
                     @include text-formatter($grey, 400, 140%, 16px "Space Mono");
+                }
+
+                #change {
+                    @include for-size(mobile) {
+                        display: none;
+                    }
+                }
+
+                #sold {
+                    @include for-size(tablet) {
+                        display: none;
+                    }
                 }
             }
     
@@ -80,6 +164,16 @@
             margin-bottom: 20px;
             gap: 100px;
 
+            @include for-size(tablet) {
+                width: 690px;
+                height: 60px;
+            }
+
+            @include for-size(mobile) {
+                width: 315px;
+                height: 50px;
+            }
+
             .left {
                 width: 430px;
                 height: 60px;
@@ -88,6 +182,16 @@
                 align-items: center;
                 gap: 20px;
                 position: relative;
+
+                @include for-size(tablet) {
+                    width: 410px;
+                    height: 31px;
+                }
+
+                @include for-size(mobile) {
+                    width: 201px;
+                    height: 24px;
+                }
 
                 .circle {
                     display: flex;
@@ -100,7 +204,17 @@
                     position: absolute;
                     left: -5px;
                     top: 15px;
-    
+
+                    @include for-size(tablet) {
+                        width: 24px;
+                        height: 24px;
+                        top: 5px;
+                    }
+
+                    @include for-size(mobile) {
+                        top: 0;
+                    }
+
                     span {
                         @include text-formatter($grey, 400, 140%, 16px, "Space Mono");
                     }
@@ -111,12 +225,26 @@
                     height: 60px;
                     position: absolute;
                     left: 35px;
-                  }
+
+                    @include for-size(tablet) {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
   
-                  h2 {
-                      @include text-formatter($white, 600, 140%, 22px);
-                      margin-left: 80px;
-                  }
+                h2{
+                    @include text-formatter($white, 600, 140%, 22px);
+                    margin-left: -40px;
+
+                    @include for-size(tablet) {
+                        margin-left: 40px;
+                    }
+
+                    @include for-size(mobile) {
+                        @include text-formatter($white, 400, 140%, 16px);
+                        margin-left: 70px;
+                    }
+                }
             }
 
             .right {
@@ -127,6 +255,8 @@
                 align-items: center;
                 padding: 0 60px 0 0;
                 gap: 20px;
+
+                
                 
                 > p {
                     @include text-formatter($white, 400, 140%, 16px, "Space Mono");
@@ -135,10 +265,69 @@
                 #number1 {
                     color: $green;
                     margin-left: -15px;
+
+                    @include for-size(tablet) {
+                        margin-left: 0;
+                    }
+                    
+                    @include for-size(mobile) {
+                        display: none;
+                    }
+                }
+
+                #number2 {
+                    @include for-size(tablet) {
+                        display: none;
+                    }
                 }
 
             }
                     
+        }
+    }
+}
+
+.footer {
+
+    .search2 {
+        display: none;
+        width: 425px;
+
+        @include for-size(mobile) {
+            display: initial;
+        }
+        
+        input {
+            width: 100%;
+            height: 60px;
+            border-radius: 20px;
+            border: none;
+            padding: 0 0 0 20px;
+
+            @include for-size(mobile) {
+                width: 315px;
+                height: 46px;
+                padding: 16px 20px;
+                margin-top: 40px;
+                margin-bottom: 16px;
+            }
+        }
+    
+        button {
+            width: 211px;
+
+            @include for-size(mobile) {
+                width: 315px;
+                height: 46px;
+            }
+    
+            span {
+                @include text-formatter($white, 600, 140%, 16px);
+            }
+    
+            &:hover {
+                background-color: rgba(128, 0, 128, 0.257);
+            }
         }
     }
 }
