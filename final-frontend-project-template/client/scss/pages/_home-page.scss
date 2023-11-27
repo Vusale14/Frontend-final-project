@@ -708,37 +708,14 @@ body {
         width: 100%;
 
         .mushroom {
+            height: 640px;
             position: relative;
+            background-image: url(../assets/images/home/picture/mushroom-image.png);
+            background-repeat: no-repeat;
+            background-size: cover;
 
-            #mushroom-image1 {
-                width: 100%;
-                height: 640px;
-
-                @include for-size(tablet) {
-                    display: none;
-                    height: 630px;
-                    object-fit: cover;
-                }
-
-                @include for-size(mobile) {
-                    height: 593px;
-                }
-            }
-
-            #mushroom-image2 {
-                display: none;
-
-                @include for-size(tablet) {
-                    width: 100%;
-                    height: 630px;
-                    display: initial;
-                }
-
-                @include for-size(mobile) {
-                    width: 100%;
-                    height: 593px;
-                    display: initial;
-                }
+            @include for-size(tablet) {
+                background-image: url(../assets/images/home/picture/primary-picture2.png);
             }
 
             .image {
@@ -753,7 +730,7 @@ body {
                 }
 
                 @include for-size(mobile) {
-                    height: 593px;
+                    height: 630px;
                 }
             }
 

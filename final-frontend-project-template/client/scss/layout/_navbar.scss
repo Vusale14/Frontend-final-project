@@ -67,10 +67,6 @@
             cursor: pointer;
         }
 
-        #burger-menu {
-            display: none;
-        }
-    
         @include for-size(tablet) {
                 
             a {
@@ -80,25 +76,37 @@
             button {
                 display: none;
             }
-    
-            #burger-menu {
-                display: initial;
-            }
         }    
     }
+
+    .navbar > img:last-child {
+        position: absolute;
+        display: none;
+        top: 15px;
+        right: 50px;
+        cursor: pointer;
+
+        @include for-size(tablet) {
+            display: initial;
+        }
+    }
+
     .sidebar {
         display: none;
         width: 200px;
         height: 100%;
-        position: absolute;
-        right: 0;
+        position: fixed;
+        z-index: 2;
+        right: -300px;
         top: 0;
+        transition: 0.4s;
         background-color: grey;
         padding: 10px 0;
 
 
         @include for-size(tablet) {
             width: 300px;
+            height: 100%;
             display: flex;
             flex-direction: column;
         }
@@ -131,8 +139,8 @@
             margin-left: -10px;
         }
     }
-}
 
-.open {
-    right: -100px;
+    .sidebar.open{
+        right: 0;
+    }
 }
