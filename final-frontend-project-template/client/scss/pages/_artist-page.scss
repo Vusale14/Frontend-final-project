@@ -480,8 +480,13 @@
                             margin-bottom: 8px;
                         }
 
-                        p {
-                            @include text-formatter($white, 400, 140%, 16px, "Space Mono");
+                        .eth {
+                            display: flex;
+                            gap: 5px;
+
+                            p {
+                                @include text-formatter($white, 400, 140%, 16px, "Space Mono");
+                            }
                         }
                     }
 
@@ -492,8 +497,13 @@
                             margin-bottom: 8px;
                         }
 
-                        p {
-                            @include text-formatter($white, 400, 140%, 16px, "Space Mono");
+                        .weth {
+                            display: flex;
+                            gap: 5px;
+
+                            p {
+                                @include text-formatter($white, 400, 140%, 16px, "Space Mono");
+                            }
                         }
                     }
                 }
@@ -516,49 +526,4 @@
 
 .solid2 {
     border-bottom: 2px solid $dark-grey;
-}
-
-.footer {
-
-    .search2 {
-        display: none;
-        width: 425px;
-
-        @include for-size(mobile) {
-            display: initial;
-        }
-        
-        input {
-            width: 100%;
-            height: 60px;
-            border-radius: 20px;
-            border: none;
-            padding: 0 0 0 20px;
-
-            @include for-size(mobile) {
-                width: 315px;
-                height: 46px;
-                padding: 16px 20px;
-                margin-top: 40px;
-                margin-bottom: 16px;
-            }
-        }
-    
-        button {
-            width: 211px;
-
-            @include for-size(mobile) {
-                width: 315px;
-                height: 46px;
-            }
-    
-            span {
-                @include text-formatter($white, 600, 140%, 16px);
-            }
-    
-            &:hover {
-                background-color: rgba(128, 0, 128, 0.257);
-            }
-        }
-    }
 }

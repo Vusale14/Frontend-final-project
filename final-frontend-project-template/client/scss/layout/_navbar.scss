@@ -143,4 +143,12 @@
     .sidebar.open{
         right: 0;
     }
+
+    .burger-menu {
+        display: none;
+
+        @include for-size(tablet) {
+            display: initial;
+        }
+    }
 }

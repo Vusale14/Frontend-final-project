@@ -43,88 +43,190 @@
             margin-bottom: -180px
         }
 
-        h2 {
-            @include text-formatter($white, 600, 110%, 51px);
-            margin-bottom: 20px;
-
-            @include for-size(tablet) {
-                @include text-formatter($white, 600, 120%, 38px);
-            }
-        }
-
-        p {
-            @include text-formatter($white, 400, 160%, 22px);
-            margin-bottom: 40px;
-
-            @include for-size(tablet) {
-                @include text-formatter($white, 400, 140%, 16px);
-            }
-        }
-
-        .input {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-
-            img {
-                width: 20px;
-                height: 20px;
-                position: absolute;
-            }
-
-            #user-icon {
-                top: 12px;
-                left: 20px;
-            }
-
-            #email-icon {
-                top: 74px;
-                left: 20px;
-            }
-
-            #lock-icon {
-                top: 135px;
-                left: 20px;
-            }
-
-            #lock-icon2 {
-                top: 195px;
-                left: 20px;
-            }
-            #lock-key-icon {
-                top: 74px;
-                left: 20px;
+        form {
+            
+            h2 {
+                @include text-formatter($white, 600, 110%, 51px);
+                margin-bottom: 20px;
+    
+                @include for-size(tablet) {
+                    @include text-formatter($white, 600, 120%, 38px);
+                }
             }
     
-            input {
+            >p {
+                @include text-formatter($white, 400, 160%, 22px);
+                margin-bottom: 40px;
+    
+                @include for-size(tablet) {
+                    @include text-formatter($white, 400, 140%, 16px);
+                }
+            }
+    
+            .input-control {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+    
+                #user-icon {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 12px;
+                    left: 20px;
+                }
+        
+                input {
+                    width: 330px;
+                    height: 46px;
+                    align-items: center;
+                    border-radius: 20px;
+                    padding: 16px 20px 16px 45px;
+                    border: none;
+                    outline: none;
+    
+                    @include for-size(tablet) {
+                        width: 325px;
+                        height: 46px;
+                    }
+                }
+    
+                h3 {
+                    height: 5px;
+                }
+    
+                p {
+                    @include text-formatter(rgb(111, 111, 111), 600, 140%, 14px);
+                    visibility: hidden;
+                    padding: 0 20px 5px 20px;
+                }
+            }
+    
+            .input-control.success {
+
+                #user-icon {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 16px;
+                    left: 20px;
+                }
+    
+                input {
+                    width: 336px;
+                    height: 52px;
+                    border-radius: 20px;
+                    border: 2px solid green; 
+                }       
+            }
+    
+            .input-control.error {
+
+                #user-icon {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 16px;
+                    left: 20px;
+                }
+    
+                input {
+                    width: 336px;
+                    height: 52px;
+                    border-radius: 20px;
+                    border: 2px solid red;    
+                }
+            }
+
+            .input-control {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+    
+                #lock-icon {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 12px;
+                    left: 20px;
+                }
+    
+                input {
+                    width: 330px;
+                    height: 46px;
+                    align-items: center;
+                    gap: 12px;
+                    border-radius: 20px;
+                    padding: 16px 20px 16px 45px;
+                    border: none;
+                    outline: none;
+    
+                    @include for-size(tablet) {
+                        width: 325px;
+                        height: 46px;
+                    }
+                }
+    
+                h3 {
+                    height: 5px;
+                }
+    
+                p {
+                    @include text-formatter(rgb(111, 111, 111), 600, 140%, 14px);
+                    visibility: hidden;
+                    padding: 0 20px 5px 20px;
+                }
+            }
+    
+            .input-control.success {
+
+                #lock-icon {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 16px;
+                    left: 20px;
+                }
+    
+                input {
+                    width: 336px;
+                    height: 52px;
+                    border-radius: 20px;
+                    border: 2px solid $green; 
+                }       
+            }
+    
+            .input-control.error {
+
+                #lock-icon {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 16px;
+                    left: 20px;
+                }
+    
+                input {
+                    width: 336px;
+                    height: 52px;
+                    border-radius: 20px;
+                    border: 2px solid red;    
+                }    
+            }
+    
+            button {
                 width: 330px;
                 height: 46px;
+                display: flex;
+                justify-content: center;
                 align-items: center;
-                gap: 12px;
-                border-radius: 20px;
-                margin-bottom: 15px;
-                padding: 16px 20px 16px 45px;
-                border: none;
-
+    
+                @include text-formatter($white, 600, 140%, 16px);
+    
                 @include for-size(tablet) {
                     width: 325px;
                     height: 46px;
                 }
-            }
-        }
-
-        button {
-            width: 330px;
-            height: 46px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            @include text-formatter($white, 600, 140%, 16px);
-
-            @include for-size(tablet) {
-                width: 325px;
-                height: 46px;
             }
         }
     }

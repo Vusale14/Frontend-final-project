@@ -1,10 +1,6 @@
 .search {
     width: 425px;
     position: relative;
-
-    @include for-size(tablet) {
-        display: none;
-    }
     
     input {
         width: 100%;
@@ -12,6 +8,13 @@
         border-radius: 20px;
         border: none;
         padding: 0 0 0 20px;
+
+        @include for-size(tablet) {
+            width: 300px;
+            height: 46px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+        }
     }
 
     button {
@@ -19,6 +22,12 @@
         position: absolute;
         top: 0;
         right: 0;
+
+        @include for-size(tablet) {
+            width: 300px;
+            height: 46px;
+            position: relative;
+        }
 
         span {
             @include text-formatter($white, 600, 140%, 16px);

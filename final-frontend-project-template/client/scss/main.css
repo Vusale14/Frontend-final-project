@@ -62,11 +62,6 @@ html {
   width: 425px;
   position: relative;
 }
-@media screen and (max-width: 1050px) {
-  .search {
-    display: none;
-  }
-}
 .search input {
   width: 100%;
   height: 60px;
@@ -74,11 +69,26 @@ html {
   border: none;
   padding: 0 0 0 20px;
 }
+@media screen and (max-width: 1050px) {
+  .search input {
+    width: 300px;
+    height: 46px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+}
 .search button {
   width: 211px;
   position: absolute;
   top: 0;
   right: 0;
+}
+@media screen and (max-width: 1050px) {
+  .search button {
+    width: 300px;
+    height: 46px;
+    position: relative;
+  }
 }
 .search button span {
   color: #FFF;
@@ -372,6 +382,14 @@ button:hover {
 .navbar .sidebar.open {
   right: 0;
 }
+.navbar .burger-menu {
+  display: none;
+}
+@media screen and (max-width: 1050px) {
+  .navbar .burger-menu {
+    display: initial;
+  }
+}
 
 .footer {
   background-color: #3B3B3B;
@@ -525,49 +543,59 @@ button:hover {
     display: initial;
   }
 }
-.footer .container .right-side .search {
+.footer .container .right-side #search {
   width: 425px;
   position: relative;
 }
 @media screen and (max-width: 1050px) {
-  .footer .container .right-side .search {
+  .footer .container .right-side #search {
     display: initial;
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 690px) {
-  .footer .container .right-side .search {
-    display: none;
-  }
-}
-.footer .container .right-side .search input {
+.footer .container .right-side #search #email {
   width: 100%;
   height: 60px;
   border-radius: 20px;
   border: none;
+  outline: none;
   padding: 0 0 0 20px;
 }
 @media screen and (max-width: 1050px) {
-  .footer .container .right-side .search input {
+  .footer .container .right-side #search #email {
     width: 420px;
     height: 60px;
     margin-top: 20px;
   }
 }
-.footer .container .right-side .search button {
+@media screen and (max-width: 690px) {
+  .footer .container .right-side #search #email {
+    width: 315px;
+    height: 46px;
+  }
+}
+.footer .container .right-side #search button {
   width: 211px;
   position: absolute;
   top: 0;
   right: 0;
 }
 @media screen and (max-width: 1050px) {
-  .footer .container .right-side .search button {
+  .footer .container .right-side #search button {
     width: 179px;
     height: 61px;
     top: -20px;
   }
 }
-.footer .container .right-side .search button span {
+@media screen and (max-width: 690px) {
+  .footer .container .right-side #search button {
+    width: 315px;
+    height: 46px;
+    margin-top: 16px;
+    position: relative;
+  }
+}
+.footer .container .right-side #search button span {
   color: #FFF;
   font-weight: 600;
   line-height: 140%;
@@ -575,10 +603,10 @@ button:hover {
   font-family: "Work Sans";
   font-style: normal;
 }
-.footer .container .right-side .search button span:hover {
+.footer .container .right-side #search button span:hover {
   color: #FFF;
 }
-.footer .container .right-side .search button:hover {
+.footer .container .right-side #search button:hover {
   background-color: rgba(128, 0, 128, 0.257);
 }
 .footer .container-end {
@@ -2130,7 +2158,12 @@ body .wrapper8 .box {
 }
 @media screen and (max-width: 690px) {
   body .wrapper8 .box {
-    display: none;
+    width: 375px;
+    height: 645px;
+    padding: 40px 0;
+    margin-left: -30px;
+    flex-direction: column;
+    background-color: transparent;
   }
 }
 body .wrapper8 .box .box-left {
@@ -2141,6 +2174,13 @@ body .wrapper8 .box .box-left {
   body .wrapper8 .box .box-left {
     width: 300px;
     height: 280px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 .box .box-left {
+    width: 315px;
+    height: 255px;
+    margin-bottom: 30px;
   }
 }
 body .wrapper8 .box .box-left img {
@@ -2160,6 +2200,12 @@ body .wrapper8 .box .box-right {
 @media screen and (max-width: 1050px) {
   body .wrapper8 .box .box-right {
     width: 300px;
+    height: 280px;
+  }
+}
+@media screen and (max-width: 690px) {
+  body .wrapper8 .box .box-right {
+    width: 315px;
     height: 280px;
   }
 }
@@ -2213,51 +2259,59 @@ body .wrapper8 .box .box-right p:hover {
     color: #FFF;
   }
 }
-body .wrapper8 .box .box-right .search2 {
-  display: none;
+body .wrapper8 .box .box-right #list {
   width: 425px;
+  position: relative;
 }
 @media screen and (max-width: 1050px) {
-  body .wrapper8 .box .box-right .search2 {
+  body .wrapper8 .box .box-right #list {
     display: initial;
+    margin-top: 20px;
   }
 }
-@media screen and (max-width: 690px) {
-  body .wrapper8 .box .box-right .search2 {
-    display: initial;
-  }
-}
-body .wrapper8 .box .box-right .search2 input {
+body .wrapper8 .box .box-right #list #input {
   width: 100%;
   height: 60px;
   border-radius: 20px;
   border: none;
   padding: 0 0 0 20px;
+  outline: none;
 }
 @media screen and (max-width: 1050px) {
-  body .wrapper8 .box .box-right .search2 input {
-    width: 300px;
-    height: 46px;
-    padding: 16px 20px;
-    margin-bottom: 16px;
+  body .wrapper8 .box .box-right #list #input {
+    width: 420px;
+    height: 60px;
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 690px) {
-  body .wrapper8 .box .box-right .search2 input {
+  body .wrapper8 .box .box-right #list #input {
     width: 315px;
     height: 46px;
   }
 }
-body .wrapper8 .box .box-right .search2 button {
+body .wrapper8 .box .box-right #list button {
   width: 211px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 @media screen and (max-width: 1050px) {
-  body .wrapper8 .box .box-right .search2 button {
-    width: 300px;
-    height: 46px;
+  body .wrapper8 .box .box-right #list button {
+    width: 179px;
+    height: 61px;
+    top: -20px;
   }
 }
-body .wrapper8 .box .box-right .search2 button span {
+@media screen and (max-width: 690px) {
+  body .wrapper8 .box .box-right #list button {
+    width: 315px;
+    height: 46px;
+    margin-top: 16px;
+    position: relative;
+  }
+}
+body .wrapper8 .box .box-right #list button span {
   color: #FFF;
   font-weight: 600;
   line-height: 140%;
@@ -2265,154 +2319,10 @@ body .wrapper8 .box .box-right .search2 button span {
   font-family: "Work Sans";
   font-style: normal;
 }
-body .wrapper8 .box .box-right .search2 button span:hover {
+body .wrapper8 .box .box-right #list button span:hover {
   color: #FFF;
 }
-body .wrapper8 .box .box-right .search2 button:hover {
-  background-color: rgba(128, 0, 128, 0.257);
-}
-body .wrapper8 .box-left.second {
-  display: none;
-}
-@media screen and (max-width: 690px) {
-  body .wrapper8 .box-left.second {
-    display: flex;
-    justify-content: center;
-    padding: 40px;
-  }
-}
-@media screen and (max-width: 690px) {
-  body .wrapper8 .box-left.second img {
-    width: 315px;
-    height: 255px;
-    margin-bottom: 30px;
-  }
-}
-body .wrapper8 .box-right.second {
-  display: none;
-}
-@media screen and (max-width: 690px) {
-  body .wrapper8 .box-right.second {
-    display: initial;
-  }
-}
-body .wrapper8 .box-right.second h2 {
-  color: #FFF;
-  font-weight: 600;
-  line-height: 140%;
-  font-size: 28px;
-  font-family: "Work Sans";
-  font-style: normal;
-  margin-bottom: 10px;
-}
-body .wrapper8 .box-right.second h2:hover {
-  color: #FFF;
-}
-body .wrapper8 .box-right.second p {
-  color: #FFF;
-  font-weight: 400;
-  line-height: 140%;
-  font-size: 16px;
-  font-family: "Work Sans";
-  font-style: normal;
-}
-body .wrapper8 .box-right.second p:hover {
-  color: #FFF;
-}
-body .wrapper8 .search2 {
-  display: none;
-  width: 425px;
-}
-@media screen and (max-width: 690px) {
-  body .wrapper8 .search2 {
-    display: initial;
-  }
-}
-body .wrapper8 .search2 input {
-  width: 100%;
-  height: 60px;
-  border-radius: 20px;
-  border: none;
-  padding: 0 0 0 20px;
-}
-@media screen and (max-width: 690px) {
-  body .wrapper8 .search2 input {
-    width: 315px;
-    height: 46px;
-    padding: 16px 20px;
-    margin-top: 40px;
-    margin-bottom: 16px;
-  }
-}
-body .wrapper8 .search2 button {
-  width: 211px;
-}
-@media screen and (max-width: 690px) {
-  body .wrapper8 .search2 button {
-    width: 315px;
-    height: 46px;
-  }
-}
-body .wrapper8 .search2 button span {
-  color: #FFF;
-  font-weight: 600;
-  line-height: 140%;
-  font-size: 16px;
-  font-family: "Work Sans";
-  font-style: normal;
-}
-body .wrapper8 .search2 button span:hover {
-  color: #FFF;
-}
-body .wrapper8 .search2 button:hover {
-  background-color: rgba(128, 0, 128, 0.257);
-}
-body .footer .search2 {
-  display: none;
-  width: 425px;
-}
-@media screen and (max-width: 690px) {
-  body .footer .search2 {
-    display: initial;
-  }
-}
-body .footer .search2 input {
-  width: 100%;
-  height: 60px;
-  border-radius: 20px;
-  border: none;
-  padding: 0 0 0 20px;
-}
-@media screen and (max-width: 690px) {
-  body .footer .search2 input {
-    width: 315px;
-    height: 46px;
-    padding: 16px 20px;
-    margin-top: 40px;
-    margin-bottom: 16px;
-  }
-}
-body .footer .search2 button {
-  width: 211px;
-}
-@media screen and (max-width: 690px) {
-  body .footer .search2 button {
-    width: 315px;
-    height: 46px;
-  }
-}
-body .footer .search2 button span {
-  color: #FFF;
-  font-weight: 600;
-  line-height: 140%;
-  font-size: 16px;
-  font-family: "Work Sans";
-  font-style: normal;
-}
-body .footer .search2 button span:hover {
-  color: #FFF;
-}
-body .footer .search2 button:hover {
+body .wrapper8 .box .box-right #list button:hover {
   background-color: rgba(128, 0, 128, 0.257);
 }
 
@@ -2474,7 +2384,7 @@ body .footer .search2 button:hover {
     margin-bottom: -180px;
   }
 }
-.middle-side .right-side h2 {
+.middle-side .right-side form h2 {
   color: #FFF;
   font-weight: 600;
   line-height: 110%;
@@ -2483,11 +2393,11 @@ body .footer .search2 button:hover {
   font-style: normal;
   margin-bottom: 20px;
 }
-.middle-side .right-side h2:hover {
+.middle-side .right-side form h2:hover {
   color: #FFF;
 }
 @media screen and (max-width: 1050px) {
-  .middle-side .right-side h2 {
+  .middle-side .right-side form h2 {
     color: #FFF;
     font-weight: 600;
     line-height: 120%;
@@ -2495,11 +2405,11 @@ body .footer .search2 button:hover {
     font-family: "Work Sans";
     font-style: normal;
   }
-  .middle-side .right-side h2:hover {
+  .middle-side .right-side form h2:hover {
     color: #FFF;
   }
 }
-.middle-side .right-side p {
+.middle-side .right-side form > p {
   color: #FFF;
   font-weight: 400;
   line-height: 160%;
@@ -2508,11 +2418,11 @@ body .footer .search2 button:hover {
   font-style: normal;
   margin-bottom: 40px;
 }
-.middle-side .right-side p:hover {
+.middle-side .right-side form > p:hover {
   color: #FFF;
 }
 @media screen and (max-width: 1050px) {
-  .middle-side .right-side p {
+  .middle-side .right-side form > p {
     color: #FFF;
     font-weight: 400;
     line-height: 140%;
@@ -2520,63 +2430,237 @@ body .footer .search2 button:hover {
     font-family: "Work Sans";
     font-style: normal;
   }
-  .middle-side .right-side p:hover {
+  .middle-side .right-side form > p:hover {
     color: #FFF;
   }
 }
-.middle-side .right-side .input {
+.middle-side .right-side form .input-control {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-.middle-side .right-side .input img {
+.middle-side .right-side form .input-control #user-icon {
   width: 20px;
   height: 20px;
   position: absolute;
-}
-.middle-side .right-side .input #user-icon {
-  top: 12px;
+  top: 16px;
   left: 20px;
 }
-.middle-side .right-side .input #email-icon {
-  top: 74px;
+.middle-side .right-side form .input-control input {
+  width: 330px;
+  height: 46px;
+  align-items: center;
+  border-radius: 20px;
+  padding: 16px 20px 16px 45px;
+  border: none;
+  outline: none;
+}
+@media screen and (max-width: 1050px) {
+  .middle-side .right-side form .input-control input {
+    width: 325px;
+    height: 46px;
+  }
+}
+.middle-side .right-side form .input-control h3 {
+  height: 5px;
+}
+.middle-side .right-side form .input-control p {
+  color: rgb(111, 111, 111);
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 14px;
+  font-family: "Work Sans";
+  font-style: normal;
+  visibility: hidden;
+  padding: 0 20px 5px 20px;
+}
+.middle-side .right-side form .input-control p:hover {
+  color: rgb(111, 111, 111);
+}
+.middle-side .right-side form .input-control.success input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid green;
+}
+.middle-side .right-side form .input-control.error input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid red;
+}
+.middle-side .right-side form .input-control {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.middle-side .right-side form .input-control #email-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
   left: 20px;
 }
-.middle-side .right-side .input #lock-icon {
-  top: 135px;
-  left: 20px;
-}
-.middle-side .right-side .input #lock-icon2 {
-  top: 195px;
-  left: 20px;
-}
-.middle-side .right-side .input #lock-key-icon {
-  top: 74px;
-  left: 20px;
-}
-.middle-side .right-side .input input {
+.middle-side .right-side form .input-control input {
   width: 330px;
   height: 46px;
   align-items: center;
   gap: 12px;
   border-radius: 20px;
-  margin-bottom: 15px;
   padding: 16px 20px 16px 45px;
   border: none;
+  outline: none;
 }
 @media screen and (max-width: 1050px) {
-  .middle-side .right-side .input input {
+  .middle-side .right-side form .input-control input {
     width: 325px;
     height: 46px;
   }
 }
-.middle-side .right-side .validation {
-  width: 330px;
-  height: 20px;
-  background-color: green;
-  margin-top: -15px;
+.middle-side .right-side form .input-control h3 {
+  height: 5px;
 }
-.middle-side .right-side button {
+.middle-side .right-side form .input-control p {
+  color: rgb(111, 111, 111);
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 14px;
+  font-family: "Work Sans";
+  font-style: normal;
+  visibility: hidden;
+  padding: 0 20px 5px 20px;
+}
+.middle-side .right-side form .input-control p:hover {
+  color: rgb(111, 111, 111);
+}
+.middle-side .right-side form .input-control.success input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid #00AC4F;
+}
+.middle-side .right-side form .input-control.error input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid red;
+}
+.middle-side .right-side form .input-control {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.middle-side .right-side form .input-control #lock-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
+.middle-side .right-side form .input-control input {
+  width: 330px;
+  height: 46px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  padding: 16px 20px 16px 45px;
+  border: none;
+  outline: none;
+}
+@media screen and (max-width: 1050px) {
+  .middle-side .right-side form .input-control input {
+    width: 325px;
+    height: 46px;
+  }
+}
+.middle-side .right-side form .input-control h3 {
+  height: 5px;
+}
+.middle-side .right-side form .input-control p {
+  color: rgb(111, 111, 111);
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 14px;
+  font-family: "Work Sans";
+  font-style: normal;
+  visibility: hidden;
+  padding: 0 20px 5px 20px;
+}
+.middle-side .right-side form .input-control p:hover {
+  color: rgb(111, 111, 111);
+}
+.middle-side .right-side form .input-control.success input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid #00AC4F;
+}
+.middle-side .right-side form .input-control.error input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid red;
+}
+.middle-side .right-side form .input-control {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.middle-side .right-side form .input-control #lock-icon2 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
+.middle-side .right-side form .input-control input {
+  width: 330px;
+  height: 46px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  padding: 16px 20px 16px 45px;
+  border: none;
+  outline: none;
+}
+@media screen and (max-width: 1050px) {
+  .middle-side .right-side form .input-control input {
+    width: 325px;
+    height: 46px;
+  }
+}
+.middle-side .right-side form .input-control h3 {
+  height: 5px;
+}
+.middle-side .right-side form .input-control p {
+  color: rgb(111, 111, 111);
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 14px;
+  font-family: "Work Sans";
+  font-style: normal;
+  visibility: hidden;
+  padding: 0 20px 5px 20px;
+}
+.middle-side .right-side form .input-control p:hover {
+  color: rgb(111, 111, 111);
+}
+.middle-side .right-side form .input-control.success input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid #00AC4F;
+}
+.middle-side .right-side form .input-control.error input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid red;
+}
+.middle-side .right-side form .input-control.error p {
+  visibility: visible;
+}
+.middle-side .right-side form button {
   width: 330px;
   height: 46px;
   display: flex;
@@ -2589,11 +2673,11 @@ body .footer .search2 button:hover {
   font-family: "Work Sans";
   font-style: normal;
 }
-.middle-side .right-side button:hover {
+.middle-side .right-side form button:hover {
   color: #FFF;
 }
 @media screen and (max-width: 1050px) {
-  .middle-side .right-side button {
+  .middle-side .right-side form button {
     width: 325px;
     height: 46px;
   }
@@ -2706,7 +2790,7 @@ body .footer .search2 button:hover {
     margin-bottom: -180px;
   }
 }
-.middle-side .right-side h2 {
+.middle-side .right-side form h2 {
   color: #FFF;
   font-weight: 600;
   line-height: 110%;
@@ -2715,11 +2799,11 @@ body .footer .search2 button:hover {
   font-style: normal;
   margin-bottom: 20px;
 }
-.middle-side .right-side h2:hover {
+.middle-side .right-side form h2:hover {
   color: #FFF;
 }
 @media screen and (max-width: 1050px) {
-  .middle-side .right-side h2 {
+  .middle-side .right-side form h2 {
     color: #FFF;
     font-weight: 600;
     line-height: 120%;
@@ -2727,11 +2811,11 @@ body .footer .search2 button:hover {
     font-family: "Work Sans";
     font-style: normal;
   }
-  .middle-side .right-side h2:hover {
+  .middle-side .right-side form h2:hover {
     color: #FFF;
   }
 }
-.middle-side .right-side p {
+.middle-side .right-side form > p {
   color: #FFF;
   font-weight: 400;
   line-height: 160%;
@@ -2740,11 +2824,11 @@ body .footer .search2 button:hover {
   font-style: normal;
   margin-bottom: 40px;
 }
-.middle-side .right-side p:hover {
+.middle-side .right-side form > p:hover {
   color: #FFF;
 }
 @media screen and (max-width: 1050px) {
-  .middle-side .right-side p {
+  .middle-side .right-side form > p {
     color: #FFF;
     font-weight: 400;
     line-height: 140%;
@@ -2752,57 +2836,150 @@ body .footer .search2 button:hover {
     font-family: "Work Sans";
     font-style: normal;
   }
-  .middle-side .right-side p:hover {
+  .middle-side .right-side form > p:hover {
     color: #FFF;
   }
 }
-.middle-side .right-side .input {
+.middle-side .right-side form .input-control {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-.middle-side .right-side .input img {
+.middle-side .right-side form .input-control #user-icon {
   width: 20px;
   height: 20px;
   position: absolute;
-}
-.middle-side .right-side .input #user-icon {
   top: 12px;
   left: 20px;
 }
-.middle-side .right-side .input #email-icon {
-  top: 74px;
+.middle-side .right-side form .input-control input {
+  width: 330px;
+  height: 46px;
+  align-items: center;
+  border-radius: 20px;
+  padding: 16px 20px 16px 45px;
+  border: none;
+  outline: none;
+}
+@media screen and (max-width: 1050px) {
+  .middle-side .right-side form .input-control input {
+    width: 325px;
+    height: 46px;
+  }
+}
+.middle-side .right-side form .input-control h3 {
+  height: 5px;
+}
+.middle-side .right-side form .input-control p {
+  color: rgb(111, 111, 111);
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 14px;
+  font-family: "Work Sans";
+  font-style: normal;
+  visibility: hidden;
+  padding: 0 20px 5px 20px;
+}
+.middle-side .right-side form .input-control p:hover {
+  color: rgb(111, 111, 111);
+}
+.middle-side .right-side form .input-control.success #user-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
   left: 20px;
 }
-.middle-side .right-side .input #lock-icon {
-  top: 135px;
+.middle-side .right-side form .input-control.success input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid green;
+}
+.middle-side .right-side form .input-control.error #user-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
   left: 20px;
 }
-.middle-side .right-side .input #lock-icon2 {
-  top: 195px;
+.middle-side .right-side form .input-control.error input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid red;
+}
+.middle-side .right-side form .input-control {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.middle-side .right-side form .input-control #lock-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
   left: 20px;
 }
-.middle-side .right-side .input #lock-key-icon {
-  top: 74px;
-  left: 20px;
-}
-.middle-side .right-side .input input {
+.middle-side .right-side form .input-control input {
   width: 330px;
   height: 46px;
   align-items: center;
   gap: 12px;
   border-radius: 20px;
-  margin-bottom: 15px;
   padding: 16px 20px 16px 45px;
   border: none;
+  outline: none;
 }
 @media screen and (max-width: 1050px) {
-  .middle-side .right-side .input input {
+  .middle-side .right-side form .input-control input {
     width: 325px;
     height: 46px;
   }
 }
-.middle-side .right-side button {
+.middle-side .right-side form .input-control h3 {
+  height: 5px;
+}
+.middle-side .right-side form .input-control p {
+  color: rgb(111, 111, 111);
+  font-weight: 600;
+  line-height: 140%;
+  font-size: 14px;
+  font-family: "Work Sans";
+  font-style: normal;
+  visibility: hidden;
+  padding: 0 20px 5px 20px;
+}
+.middle-side .right-side form .input-control p:hover {
+  color: rgb(111, 111, 111);
+}
+.middle-side .right-side form .input-control.success #lock-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
+.middle-side .right-side form .input-control.success input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid #00AC4F;
+}
+.middle-side .right-side form .input-control.error #lock-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
+.middle-side .right-side form .input-control.error input {
+  width: 336px;
+  height: 52px;
+  border-radius: 20px;
+  border: 2px solid red;
+}
+.middle-side .right-side form button {
   width: 330px;
   height: 46px;
   display: flex;
@@ -2815,11 +2992,11 @@ body .footer .search2 button:hover {
   font-family: "Work Sans";
   font-style: normal;
 }
-.middle-side .right-side button:hover {
+.middle-side .right-side form button:hover {
   color: #FFF;
 }
 @media screen and (max-width: 1050px) {
-  .middle-side .right-side button {
+  .middle-side .right-side form button {
     width: 325px;
     height: 46px;
   }
@@ -3579,7 +3756,11 @@ body .footer .search2 button:hover {
 .third-section .cards .card .card-middle .card-bottom .card-bottom-left h6:hover {
   color: #858584;
 }
-.third-section .cards .card .card-middle .card-bottom .card-bottom-left p {
+.third-section .cards .card .card-middle .card-bottom .card-bottom-left .eth {
+  display: flex;
+  gap: 5px;
+}
+.third-section .cards .card .card-middle .card-bottom .card-bottom-left .eth p {
   color: #FFF;
   font-weight: 400;
   line-height: 140%;
@@ -3587,7 +3768,7 @@ body .footer .search2 button:hover {
   font-family: "Space Mono";
   font-style: normal;
 }
-.third-section .cards .card .card-middle .card-bottom .card-bottom-left p:hover {
+.third-section .cards .card .card-middle .card-bottom .card-bottom-left .eth p:hover {
   color: #FFF;
 }
 .third-section .cards .card .card-middle .card-bottom .card-bottom-right h6 {
@@ -3602,7 +3783,11 @@ body .footer .search2 button:hover {
 .third-section .cards .card .card-middle .card-bottom .card-bottom-right h6:hover {
   color: #858584;
 }
-.third-section .cards .card .card-middle .card-bottom .card-bottom-right p {
+.third-section .cards .card .card-middle .card-bottom .card-bottom-right .weth {
+  display: flex;
+  gap: 5px;
+}
+.third-section .cards .card .card-middle .card-bottom .card-bottom-right .weth p {
   color: #FFF;
   font-weight: 400;
   line-height: 140%;
@@ -3610,7 +3795,7 @@ body .footer .search2 button:hover {
   font-family: "Space Mono";
   font-style: normal;
 }
-.third-section .cards .card .card-middle .card-bottom .card-bottom-right p:hover {
+.third-section .cards .card .card-middle .card-bottom .card-bottom-right .weth p:hover {
   color: #FFF;
 }
 @media screen and (max-width: 1050px) {
@@ -3626,55 +3811,6 @@ body .footer .search2 button:hover {
 
 .solid2 {
   border-bottom: 2px solid #2B2B2B;
-}
-
-.footer .search2 {
-  display: none;
-  width: 425px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 {
-    display: initial;
-  }
-}
-.footer .search2 input {
-  width: 100%;
-  height: 60px;
-  border-radius: 20px;
-  border: none;
-  padding: 0 0 0 20px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 input {
-    width: 315px;
-    height: 46px;
-    padding: 16px 20px;
-    margin-top: 40px;
-    margin-bottom: 16px;
-  }
-}
-.footer .search2 button {
-  width: 211px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 button {
-    width: 315px;
-    height: 46px;
-  }
-}
-.footer .search2 button span {
-  color: #FFF;
-  font-weight: 600;
-  line-height: 140%;
-  font-size: 16px;
-  font-family: "Work Sans";
-  font-style: normal;
-}
-.footer .search2 button span:hover {
-  color: #FFF;
-}
-.footer .search2 button:hover {
-  background-color: rgba(128, 0, 128, 0.257);
 }
 
 .first-section .first-part {
@@ -3993,6 +4129,20 @@ body .footer .search2 button:hover {
   .third-section .cards .card.second {
     display: none;
   }
+}
+
+.show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show-more img {
+  width: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.show-more img:hover {
+  transform: scale(1.1);
 }
 
 .solid2 {
@@ -4467,6 +4617,22 @@ body .footer .search2 button:hover {
   padding: 0 60px 0 0;
   gap: 20px;
 }
+.section-third .information .mini-card .right > h4 {
+  color: #00AC4F;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 16px;
+  font-family: "Space Mono";
+  font-style: normal;
+}
+.section-third .information .mini-card .right > h4:hover {
+  color: #00AC4F;
+}
+@media screen and (max-width: 690px) {
+  .section-third .information .mini-card .right > h4 {
+    display: none;
+  }
+}
 .section-third .information .mini-card .right > p {
   color: #FFF;
   font-weight: 400;
@@ -4477,20 +4643,6 @@ body .footer .search2 button:hover {
 }
 .section-third .information .mini-card .right > p:hover {
   color: #FFF;
-}
-.section-third .information .mini-card .right #number1 {
-  color: #00AC4F;
-  margin-left: -15px;
-}
-@media screen and (max-width: 1050px) {
-  .section-third .information .mini-card .right #number1 {
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 690px) {
-  .section-third .information .mini-card .right #number1 {
-    display: none;
-  }
 }
 @media screen and (max-width: 1050px) {
   .section-third .information .mini-card .right #number2 {

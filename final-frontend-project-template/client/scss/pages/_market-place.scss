@@ -205,6 +205,22 @@
             }
         }
     }
+  
+  
+}
+.show-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img{
+        width: 30px;
+        cursor: pointer;
+    transition: 0.2s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
 }
 
 .solid2 {

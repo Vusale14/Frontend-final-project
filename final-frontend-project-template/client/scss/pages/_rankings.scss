@@ -256,23 +256,16 @@
                 padding: 0 60px 0 0;
                 gap: 20px;
 
-                
-                
-                > p {
-                    @include text-formatter($white, 400, 140%, 16px, "Space Mono");
-                }
+                > h4 {
+                    @include text-formatter($green, 400, 140%, 16px, "Space Mono");
 
-                #number1 {
-                    color: $green;
-                    margin-left: -15px;
-
-                    @include for-size(tablet) {
-                        margin-left: 0;
-                    }
-                    
                     @include for-size(mobile) {
                         display: none;
                     }
+                }
+                
+                > p {
+                    @include text-formatter($white, 400, 140%, 16px, "Space Mono");
                 }
 
                 #number2 {
