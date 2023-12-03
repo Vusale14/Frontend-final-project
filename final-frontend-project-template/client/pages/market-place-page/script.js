@@ -58,17 +58,6 @@ function createCreatorRow(nfts) {
         const nameElement = document.createElement("h6");
         nameElement.textContent = nft.name;
         cardMiddleElement.append(nameElement);
-
-        // const nameCeil = document.createElement("div");
-        // nameCeil.className = "moon";
-        // cardMiddleElement.append(nameCeil);
-
-        // const creatorName = document.createElement(p);
-        // creatorName.textContent = creator.name;
-        // nameCeil.append(creatorName);
-
-        // const creatorImg = document.createElement("img");
-        // creatorImg.src = "../../../" + creator.ImgPath;
         
         const cardBottomElement = document.createElement("div");
         cardBottomElement.className = "card-bottom";
@@ -116,9 +105,28 @@ function createCreatorRow(nfts) {
 
         cardElement.append(cardTopElement, cardMiddleElement);
         nftCards.append(cardElement);
+        console.log(nfts);
     });
     
 }
 
 
 fillTableWithCreators();
+
+const search = document.querySelector(".first-part .search");
+
+search.addEventListener("keyup", (e) => {
+    const cardElements = document.querySelectorAll(".cards .card");
+
+    Array.from(cardElements).forEach(element => {
+        const title = element.querySelector(".card-middle h6").textContent;
+        console.log(title);
+        if(
+            title.toLowerCase().trim().includes(e.target.value.toLowerCase().trim())
+        ){
+            element.style.display = "initial";
+        }else {
+            element.style.display = "none";
+        }
+    });
+});

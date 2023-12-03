@@ -34,6 +34,9 @@ async function fillCreatorData() {
     const h6FollowersElement = document.querySelector('.followers h6');
     h6FollowersElement.textContent = creator.followers;
 
+    const  bioElement = document.querySelector('.bio p');
+    bioElement.textContent = creator.bio;
+
     createNftCard(creator.nfts)
 }
 
@@ -65,13 +68,6 @@ nfts.forEach((nft)=>{
     const nameCeil = document.createElement("div");
     nameCeil.className = "moon";
     cardMiddleElement.append(nameCeil);
-
-    const creatorName = document.createElement(p);
-    creatorName.textContent = creator.name;
-    nameCeil.append(creatorName);
-
-    // const creatorImg = document.createElement("img");
-    // creatorImg.src = "../../../" + creator.ImgPath;
     
     const cardBottomElement = document.createElement("div");
     cardBottomElement.className = "card-bottom";

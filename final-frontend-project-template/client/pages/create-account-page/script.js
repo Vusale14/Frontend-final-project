@@ -10,6 +10,12 @@ form.addEventListener('submit', e => {
      validateInputs();
 });
 
+form.addEventListener('keyup', e => {
+    e.preventDefault();
+    console.log("submit");
+     validateInputs();
+});
+
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('p');
@@ -45,13 +51,13 @@ const validateInputs = () => {
     const confirmPasswordValue = confirmPassword.value.trim();
 
     if(usernameValue === '') {
-        setError(username, 'Password Required*');
+        setError(username, 'Username Required*');
     }else {
         setSuccsess(username);
     }
 
     if(emailValue === '') {
-        setError(email, 'Password Required*');
+        setError(email, 'Email Required*');
     }else if (!isValidEmail(emailValue)) {
         setError(email, 'Something went wrong. Please try again');
     }else {
@@ -67,10 +73,79 @@ const validateInputs = () => {
     }
 
     if (confirmPasswordValue === '') {
-        setError(confirmPassword, 'Password Required*');
+        setError(confirmPassword, 'Confirm Password Required*');
     }else if (passwordValue !== confirmPasswordValue) {
         setError(confirmPassword, 'Something went wrong. Please try again');
     }else {
         setSuccsess(confirmPassword);
     }
 };
+
+
+
+
+
+const accountCreateForm = document.getElementById('form');
+const usernameElement = document.getElementById('username');
+const emailElement = document.getElementById('email');
+const passwordElement = document.getElementById('password');
+const confirmPasswordElement = document.getElementById('confirm-password');
+
+accountCreateForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const username = usernameElement.value;
+    const email = emailElement.value;
+    const password = passwordElement.value;
+
+    if(!username || !email || !password) {
+        createToast("Username, email and password are required", "error");
+        return;
+    }
+
+    const account = {
+        username,
+        email,
+        password,
+    };
+    createAccount(account);
+});
+
+async function createAccount(account) {
+    const response = await fetch(`${BASE_URL}/register`, {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(account)
+    });
+    console.log(response);
+    const data = await response.json();
+    if(response.status!==201) {
+        createToast(data.error, "error");
+        return;
+    }
+
+    createToast("Account successfully created", "success");
+}
+
+function resetFields() {
+    usernameElement.value = "";
+    emailElement.value = "";
+    passwordElement.value = "",
+    confirmPasswordElement.value = ""
+}
+
+function createToast(text,type) {
+    Toastify({
+        text,
+        duration: 1000,
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true,
+        style: {
+         background: type === "success" ? "green" : "red",
+         color: "white",
+        },
+      }).showToast();
+}

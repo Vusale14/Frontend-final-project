@@ -2683,55 +2683,6 @@ body .wrapper8 .box .box-right #list button:hover {
   }
 }
 
-.footer .search2 {
-  display: none;
-  width: 425px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 {
-    display: initial;
-  }
-}
-.footer .search2 input {
-  width: 100%;
-  height: 60px;
-  border-radius: 20px;
-  border: none;
-  padding: 0 0 0 20px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 input {
-    width: 315px;
-    height: 46px;
-    padding: 16px 20px;
-    margin-top: 40px;
-    margin-bottom: 16px;
-  }
-}
-.footer .search2 button {
-  width: 211px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 button {
-    width: 315px;
-    height: 46px;
-  }
-}
-.footer .search2 button span {
-  color: #FFF;
-  font-weight: 600;
-  line-height: 140%;
-  font-size: 16px;
-  font-family: "Work Sans";
-  font-style: normal;
-}
-.footer .search2 button span:hover {
-  color: #FFF;
-}
-.footer .search2 button:hover {
-  background-color: rgba(128, 0, 128, 0.257);
-}
-
 .middle-side {
   display: flex;
   gap: 60px;
@@ -3000,55 +2951,6 @@ body .wrapper8 .box .box-right #list button:hover {
     width: 325px;
     height: 46px;
   }
-}
-
-.footer .search2 {
-  display: none;
-  width: 425px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 {
-    display: initial;
-  }
-}
-.footer .search2 input {
-  width: 100%;
-  height: 60px;
-  border-radius: 20px;
-  border: none;
-  padding: 0 0 0 20px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 input {
-    width: 315px;
-    height: 46px;
-    padding: 16px 20px;
-    margin-top: 40px;
-    margin-bottom: 16px;
-  }
-}
-.footer .search2 button {
-  width: 211px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 button {
-    width: 315px;
-    height: 46px;
-  }
-}
-.footer .search2 button span {
-  color: #FFF;
-  font-weight: 600;
-  line-height: 140%;
-  font-size: 16px;
-  font-family: "Work Sans";
-  font-style: normal;
-}
-.footer .search2 button span:hover {
-  color: #FFF;
-}
-.footer .search2 button:hover {
-  background-color: rgba(128, 0, 128, 0.257);
 }
 
 .background-picture {
@@ -4118,7 +4020,6 @@ body .wrapper8 .box .box-right #list button:hover {
   width: 330px;
   height: 469px;
   background-color: #2B2B2B;
-  margin-top: -20px;
 }
 @media screen and (max-width: 1050px) {
   .third-section .cards .card.passiv {
@@ -4648,53 +4549,4 @@ body .wrapper8 .box .box-right #list button:hover {
   .section-third .information .mini-card .right #number2 {
     display: none;
   }
-}
-
-.footer .search2 {
-  display: none;
-  width: 425px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 {
-    display: initial;
-  }
-}
-.footer .search2 input {
-  width: 100%;
-  height: 60px;
-  border-radius: 20px;
-  border: none;
-  padding: 0 0 0 20px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 input {
-    width: 315px;
-    height: 46px;
-    padding: 16px 20px;
-    margin-top: 40px;
-    margin-bottom: 16px;
-  }
-}
-.footer .search2 button {
-  width: 211px;
-}
-@media screen and (max-width: 690px) {
-  .footer .search2 button {
-    width: 315px;
-    height: 46px;
-  }
-}
-.footer .search2 button span {
-  color: #FFF;
-  font-weight: 600;
-  line-height: 140%;
-  font-size: 16px;
-  font-family: "Work Sans";
-  font-style: normal;
-}
-.footer .search2 button span:hover {
-  color: #FFF;
-}
-.footer .search2 button:hover {
-  background-color: rgba(128, 0, 128, 0.257);
 }

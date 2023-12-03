@@ -109,11 +109,7 @@ const validEmailElement = email => {
 
 const validationInp = () => {
     const emailValue = email.value.trim();
-
-    // if(emailValue === '') {
-    //     setErrElement(email, 'Password Required*')
-    //     // console.log("123");
-    //   }
+    
       if (!validEmailElement(emailValue)) {
         setErrElement(email, 'Something went wrong. Please try again')
         console.log("123");
