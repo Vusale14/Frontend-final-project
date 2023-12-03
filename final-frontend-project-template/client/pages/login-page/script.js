@@ -10,6 +10,12 @@ form.addEventListener('submit', e => {
      validateInputs();
 });
 
+form.addEventListener('keyup', e => {
+    e.preventDefault();
+    console.log("submit");
+     validateInputs();
+});
+
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('p');
